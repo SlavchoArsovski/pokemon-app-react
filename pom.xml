@@ -11,12 +11,13 @@
 
   <properties>
     <springframework.version>4.3.2.RELEASE</springframework.version>
-    <spring-data-jpa.version>1.10.6.RELEASE</spring-data-jpa.version>
+    <spring-data-jpa.version>1.8.2.RELEASE</spring-data-jpa.version>
     <hibernate.version>4.3.11.Final</hibernate.version>
     <hibernate-jpa-api.version>1.0.0.Final</hibernate-jpa-api.version>
     <hsqldb.version>2.3.2</hsqldb.version>
     <jackson.version>1.9.13</jackson.version>
     <guava.version>18.0</guava.version>
+    <log4j.version>1.2.17</log4j.version>
   </properties>
 
   <modules>
@@ -73,6 +74,12 @@
       </dependency>
 
       <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-tx</artifactId>
+        <version>${springframework.version}</version>
+      </dependency>
+
+      <dependency>
         <groupId>org.springframework.data</groupId>
         <artifactId>spring-data-jpa</artifactId>
         <version>${spring-data-jpa.version}</version>
@@ -110,6 +117,12 @@
       </dependency>
 
       <!-- end of hibernate properties !-->
+
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-dbcp2</artifactId>
+        <version>2.1.1</version>
+      </dependency>
 
       <!-- HyperSQL DB -->
       <dependency>
@@ -152,6 +165,13 @@
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>${guava.version}</version>
+      </dependency>
+
+      <!-- Log4j -->
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>${log4j.version}</version>
       </dependency>
 
     </dependencies>
