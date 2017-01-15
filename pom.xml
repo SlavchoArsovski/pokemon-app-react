@@ -15,6 +15,7 @@
     <hibernate.version>4.3.11.Final</hibernate.version>
     <hibernate-jpa-api.version>1.0.0.Final</hibernate-jpa-api.version>
     <hsqldb.version>2.3.2</hsqldb.version>
+    <jackson.version>1.9.13</jackson.version>
     <guava.version>18.0</guava.version>
   </properties>
 
@@ -27,6 +28,23 @@
   <dependencyManagement>
 
     <dependencies>
+
+      <!-- internal dependencies -->
+
+      <dependency>
+        <groupId>com.pokemon.app</groupId>
+        <artifactId>PokemonAppDataModel</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.pokemon.app</groupId>
+        <artifactId>PokemonAppService</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+
+      <!-- end of internal dependencies -->
 
       <!-- spring dependencies !-->
 
@@ -58,6 +76,12 @@
         <groupId>org.springframework.data</groupId>
         <artifactId>spring-data-jpa</artifactId>
         <version>${spring-data-jpa.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${springframework.version}</version>
       </dependency>
 
       <!-- end of spring dependencies !-->
@@ -93,6 +117,20 @@
         <artifactId>hsqldb</artifactId>
         <version>${hsqldb.version}</version>
       </dependency>
+
+      <!-- Jackson JSON Mapper -->
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.5.0</version>
+      </dependency>
+
 
       <dependency>
         <groupId>com.google.guava</groupId>

@@ -12,4 +12,30 @@
   <artifactId>PokemonAppService</artifactId>
 
 
+  <dependencies>
+
+    <!-- internal dependencies -->
+    <dependency>
+      <groupId>com.pokemon.app</groupId>
+      <artifactId>PokemonAppDataModel</artifactId>
+    </dependency>
+
+    <!-- end of internal dependencies -->
+
+    <!-- spring dependencies -->
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+    </dependency>
+
+    <!-- end of spring dependencies -->
+
+  </dependencies>
+
 </project>

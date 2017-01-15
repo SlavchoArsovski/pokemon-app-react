@@ -11,5 +11,54 @@
 
   <artifactId>PokemonAppWeb</artifactId>
 
+  <dependencies>
+
+    <!-- internal dependencies -->
+
+    <dependency>
+      <groupId>com.pokemon.app</groupId>
+      <artifactId>PokemonAppService</artifactId>
+    </dependency>
+
+    <!-- end of internal dependencies -->
+
+    <!-- spring dependencies -->
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+    </dependency>
+    <!-- end of spring dependencies -->
+
+    <!-- Jackson JSON Mapper -->
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
 
 </project>
