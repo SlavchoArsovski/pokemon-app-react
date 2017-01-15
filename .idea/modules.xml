@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PokemonApp.iml" filepath="$PROJECT_DIR$/PokemonApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PokemonAppDataModel/PokemonAppDataModel.iml" filepath="$PROJECT_DIR$/PokemonAppDataModel/PokemonAppDataModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PokemonAppService/PokemonAppService.iml" filepath="$PROJECT_DIR$/PokemonAppService/PokemonAppService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PokemonAppWeb/PokemonAppWeb.iml" filepath="$PROJECT_DIR$/PokemonAppWeb/PokemonAppWeb.iml" />
+    </modules>
+  </component>
+</project>
