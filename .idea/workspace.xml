@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="672da048-43ea-4f63-a4f9-da357c5c05ac" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/PokemonAppWeb_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/PokemonAppWeb_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/PokemonAppWeb.iml" afterPath="$PROJECT_DIR$/PokemonAppWeb/PokemonAppWeb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/pom.xml" afterPath="$PROJECT_DIR$/PokemonAppWeb/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/PokemonController.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/PokemonController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/js/home/homeController.js" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/js/home/homeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/js/home/homeView.js" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/js/home/homeView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="PokemonApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +32,8 @@
       <file leaf-file-name="PokemonController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/PokemonController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
+            <state relative-caret-position="434">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1410,7 +1403,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1484484655519</updated>
-      <workItem from="1484484657358" duration="35309000" />
+      <workItem from="1484484657358" duration="35741000" />
     </task>
     <task id="LOCAL-00001" summary="deleted target directory">
       <created>1484486367835</created>
@@ -1482,7 +1475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1484526428394</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="initial rest config">
+      <created>1484530489611</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1484530489611</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1518,7 +1518,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35309000" />
+    <option name="totallyTimeSpent" value="35741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1541,7 +1541,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45100105" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45100105" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1576,7 +1576,8 @@
     <MESSAGE value="added initial data models and repositories" />
     <MESSAGE value="initial service and web configuration" />
     <MESSAGE value="web config" />
-    <option name="LAST_COMMIT_MESSAGE" value="web config" />
+    <MESSAGE value="initial rest config" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial rest config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2019,8 +2020,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/PokemonController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
+        <state relative-caret-position="434">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>
