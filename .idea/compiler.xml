@@ -29,9 +29,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="PokemonApp" target="1.5" />
-      <module name="PokemonAppDataModel" target="1.5" />
-      <module name="PokemonAppService" target="1.5" />
-      <module name="PokemonAppWeb" target="1.5" />
+      <module name="PokemonAppDataModel" target="1.8" />
+      <module name="PokemonAppService" target="1.8" />
+      <module name="PokemonAppWeb" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
