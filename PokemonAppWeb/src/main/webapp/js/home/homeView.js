@@ -4,6 +4,7 @@ var homeView = {
 
     pokemonList: '.pokemon-overview-table',
     pokemonInfoRow: '.pokemon-row',
+    pokemonRowTemplate: '.pokemon-row-template',
 
     pokemonId: '.pokemonId',
     pokemonName: '.pokemonName',
@@ -37,23 +38,27 @@ var homeView = {
     var me = this;
 
     $(me.pageComponents.pokemonInfoRow).click(function() {
-
-
-      $(me.pageComponents.pokemonInfoRow).removeClass('pokemon-row-selected');
-
-      me.selectedPokemon.id = $(this).find(me.pageComponents.pokemonId).text();
-      me.selectedPokemon.name = $(this).find(me.pageComponents.pokemonName).text();
-      me.selectedPokemon.type = $(this).find(me.pageComponents.pokemonType).text();
-      me.selectedPokemon.color = $(this).find(me.pageComponents.pokemonColor).text();
-
-      $(me.pageComponents.pokemonDetailId).text(me.selectedPokemon.id);
-      $(me.pageComponents.pokemonDetailName).val(me.selectedPokemon.name);
-      $(me.pageComponents.pokemonDetailType).val(me.selectedPokemon.type);
-      $(me.pageComponents.pokemonDetailColor).val(me.selectedPokemon.color);
-
-      $(this).addClass('pokemon-row-selected');
-
+      me._pokemonRowClickHandler(this);
     });
+  },
+
+  _pokemonRowClickHandler: function(element) {
+
+    var me = this;
+
+    $(me.pageComponents.pokemonInfoRow).removeClass('pokemon-row-selected');
+
+    me.selectedPokemon.id = $(element).find(me.pageComponents.pokemonId).text();
+    me.selectedPokemon.name = $(element).find(me.pageComponents.pokemonName).text();
+    me.selectedPokemon.type = $(element).find(me.pageComponents.pokemonType).text();
+    me.selectedPokemon.color = $(element).find(me.pageComponents.pokemonColor).text();
+
+    $(me.pageComponents.pokemonDetailId).text(me.selectedPokemon.id);
+    $(me.pageComponents.pokemonDetailName).val(me.selectedPokemon.name);
+    $(me.pageComponents.pokemonDetailType).val(me.selectedPokemon.type);
+    $(me.pageComponents.pokemonDetailColor).val(me.selectedPokemon.color);
+
+    $(element).addClass('pokemon-row-selected');
 
   },
 
@@ -103,8 +108,37 @@ var homeView = {
 
   updateView: function(model) {
 
-    console.log('updateView');
-    console.log(model);
+    var me = this;
+
+    $(me.pageComponents.pokemonInfoRow).remove();
+
+    $.each(model.pokemons, function (index, pokemon) {
+
+      var templateHtml =
+        $('<div>').append($(me.pageComponents.pokemonRowTemplate).clone()).html();
+
+      templateHtml = templateHtml.replace('{pokemon.id}', pokemon.id);
+      templateHtml = templateHtml.replace('{pokemon.name}', pokemon.name);
+      templateHtml = templateHtml.replace('{pokemon.type}', pokemon.type);
+      templateHtml = templateHtml.replace('{pokemon.color}', pokemon.color);
+      templateHtml = templateHtml.replace('{pokemon.color}', pokemon.color);
+
+      var row = $(templateHtml);
+      row.removeClass('pokemon-row-template');
+      row.addClass('pokemon-row');
+      row.toggle();
+
+      row.click(function() {
+        me._pokemonRowClickHandler(this);
+      });
+
+      if (me.selectedPokemon.id && me.selectedPokemon.id == pokemon.id) {
+        row.addClass('pokemon-row-selected');
+      }
+
+      $(me.pageComponents.pokemonList).append(row);
+
+    });
 
   },
 

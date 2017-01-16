@@ -27,11 +27,22 @@
   <h1>Pokemon List</h1>
 
   <table class="pokemon-overview-table">
+
     <tr>
       <th>Pokemon ID</th>
       <th>Name</th>
       <th>Type</th>
       <th>Color</th>
+    </tr>
+
+    <tr style="display: none;" class="pokemon-row-template">
+      <td class="pokemonId">{pokemon.id}</td>
+      <td class="pokemonName">{pokemon.name}</td>
+      <td class="pokemonType">{pokemon.type}</td>
+      <td class="pokemonColor">
+        <div style="background-color: {pokemon.color}"></div>
+        <div class="pokemonColorHolder">{pokemon.color}</div>
+      </td>
     </tr>
 
     <c:forEach items="${viewBean.pokemons}" var="pokemon">
