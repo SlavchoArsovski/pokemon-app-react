@@ -1,26 +1,33 @@
 var homeView = {
 
-    pageComponents: {
-        pokemonList: '#pokemonList'
-    },
+  pageComponents: {
+    pokemonList: '.pokemon-overview-table',
+    pokemonInfoFirstRow: '.pokemon-first-row',
+    pokemonInfoSecondRow: '.pokemon-second-row'
+  },
 
-    initView: function (model) {
-        this._initViewChangingEvents();
-        this._initModelChangingEvents();
-    },
+  initView: function(model) {
+    this._initViewChangingEvents();
+    this._initModelChangingEvents();
+  },
 
-    _initViewChangingEvents: function () {
+  _initViewChangingEvents: function() {
 
-    },
+    var me = this;
 
-    _initModelChangingEvents: function () {
+    $(me.pageComponents.pokemonInfoFirstRow).click(function(element) {
+      var pokemonId = $(this).data('pokemonid');
+      $('#pokemon-second-row-' + pokemonId).toggle();
+    });
 
-    },
+  },
 
-    updateView: function (model) {
+  _initModelChangingEvents: function() {
 
-        this._updateSearchProperties(model.validProperties);
-        this._updateRealEstateType(model.selectedRealEstateType);
-    },
+  },
+
+  updateView: function(model) {
+
+  },
 
 };

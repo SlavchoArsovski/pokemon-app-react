@@ -1,15 +1,15 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $.ajaxSetup({cache: false});
+  $.ajaxSetup({ cache: false });
 
-    homeModel.init(function () {
-        // homeView.initView(homeModel.getModelForView());
-        // homeView.updateView(homeModel.getModelForView());
-    });
+  homeModel.init(function() {
+    homeView.initView(homeModel.getModelForView());
+    homeView.updateView(homeModel.getModelForView());
+  });
 
 
-    $(homeModel).on('modelchanged', function () {
-        homeView.updateView(homeModel.getModelForView());
-    });
+  $(homeModel).on('modelchanged', function() {
+    homeView.updateView(homeModel.getModelForView());
+  });
 
 });

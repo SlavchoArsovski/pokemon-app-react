@@ -1,6 +1,6 @@
 .pokemon-overview-table {
   margin: 1em 0;
-  min-width: 300px;
+  min-width: 500px;
 }
 
 .pokemon-overview-table tr {
@@ -100,4 +100,22 @@ h1 {
   left: 25%;
   position: absolute;
   border: 2px solid BLACK;
+}
+
+.pokemon-first-row {
+  cursor: pointer;
+}
+
+.pokemon-first-row:hover {
+  background-color: gray;
+}
+
+.pokemon-first-row, .pokemon-second-row {
+  border: 1px solid white;
+}
+
+
+.pokemon-name-input, .pokemon-type-input, .pokemon-color-input {
+  display: block;
+  margin: 3px;
 }

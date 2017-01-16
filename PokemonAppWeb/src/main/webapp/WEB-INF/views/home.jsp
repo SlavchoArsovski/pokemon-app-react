@@ -34,12 +34,19 @@
   </tr>
 
   <c:forEach items="${viewBean.pokemons}" var="pokemon">
-    <tr>
+    <tr id="pokemon-first-row-${pokemon.id}" class="pokemon-first-row" data-pokemonid="${pokemon.id}">
       <td>${pokemon.id}</td>
       <td>${pokemon.name}</td>
       <td>${pokemon.type}</td>
       <td class="pokemon-color">
         <div style="background-color: ${pokemon.color}"></div>
+      </td>
+    </tr>
+    <tr id="pokemon-second-row-${pokemon.id}"  class="pokemon-second-row" style="display: none;">
+      <td colspan="3">
+        <input class="pokemon-name-input" type="text" value="${pokemon.name}">
+        <input class="pokemon-type-input" type="text" value="${pokemon.type}">
+        <input class="pokemon-color-input" type="text" value="${pokemon.color}">
       </td>
     </tr>
   </c:forEach>
