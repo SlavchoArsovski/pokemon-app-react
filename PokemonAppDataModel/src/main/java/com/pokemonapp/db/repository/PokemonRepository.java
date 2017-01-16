@@ -1,6 +1,7 @@
 package com.pokemonapp.db.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
 
@@ -17,5 +18,21 @@ public interface PokemonRepository extends CrudRepository<Pokemon, Long> {
    * @return list of all pokemons.
    */
   List<Pokemon> findAll();
+
+  /**
+   * Retrieve pokemons filtered by color.
+   *
+   * @param color the pokemon color.
+   * @return list of found pokemons.
+   */
+  List<Pokemon> findByColor(String color);
+
+  /**
+   * Retrieve pokemon by its id.
+   *
+   * @param id the pokemon id.
+   * @return found pokemon if present.
+   */
+  Optional<Pokemon> findById(Long id);
 
 }

@@ -1,6 +1,7 @@
 package com.pokemonapp.db.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,11 +17,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.pokemonapp.db.configuration.BasicDataSourceProvider;
 import com.pokemonapp.db.configuration.DataModelConfiguration;
-import com.pokemonapp.db.configuration.EntityManagerFactoryProvider;
-import com.pokemonapp.db.configuration.JpaPropertiesProvider;
-import com.pokemonapp.db.configuration.JpaTransactionManagerProvider;
 import com.pokemonapp.db.datamodel.Pokemon;
 
 /**
@@ -66,6 +63,40 @@ public class PokemonRepositoryTest {
 
     System.out.println(all.size());
 
+  }
+
+  @Test
+  public void savePokemon() {
+
+    List<Pokemon> all = pokemonRepository.findAll();
+
+    System.out.println(all.size());
+    Pokemon pokemon = new Pokemon();
+    pokemon.setColor("FF0000");
+    pokemon.setName("Test Pokemon");
+    pokemon.setType("Water");
+
+    pokemonRepository.save(pokemon);
+
+    List<Pokemon> all1 = pokemonRepository.findAll();
+    System.out.println(all1.size());
+  }
+
+  @Test
+  public void updatePokemon() {
+
+    List<Pokemon> all = pokemonRepository.findAll();
+
+    Optional<Pokemon> one = pokemonRepository.findById(Long.valueOf(10001));
+
+    System.out.println(all.size());
+
+    Pokemon pokemon = one.get();
+    pokemon.setType("Water");
+    pokemonRepository.save(pokemon);
+
+    List<Pokemon> all1 = pokemonRepository.findAll();
+    System.out.println(all1.size());
   }
 
 }
