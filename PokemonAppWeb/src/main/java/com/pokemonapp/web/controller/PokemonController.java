@@ -1,6 +1,7 @@
 package com.pokemonapp.web.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -64,8 +65,15 @@ public class PokemonController {
       produces = MediaType.APPLICATION_JSON_VALUE,
       method = RequestMethod.DELETE)
   public ResponseEntity<Pokemon> deletePokemon(@PathVariable Long pokemonId) {
-    pokemonRepository.delete(pokemonId);
-    return new ResponseEntity<Pokemon>(HttpStatus.NO_CONTENT);
+
+    Optional<Pokemon> pokemonFound = pokemonRepository.findById(pokemonId);
+
+    if (pokemonFound.isPresent()) {
+      pokemonRepository.delete(pokemonId);
+      return new ResponseEntity<Pokemon>(HttpStatus.NO_CONTENT);
+    }
+
+    return new ResponseEntity<Pokemon>(HttpStatus.NOT_FOUND);
   }
 
 }
