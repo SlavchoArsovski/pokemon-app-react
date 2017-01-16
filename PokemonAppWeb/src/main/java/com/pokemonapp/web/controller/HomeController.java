@@ -6,12 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.pokemonapp.db.datamodel.Pokemon;
+import com.pokemonapp.servicelayer.dto.PokemonDto;
 import com.pokemonapp.servicelayer.service.PokemonService;
-import com.pokemonapp.web.viewmodel.HomeViewModel;
+import com.pokemonapp.web.viewmodel.PokemonViewModel;
 
 /**
  * Created by sarsovsk on 15.01.2017.
@@ -25,9 +24,9 @@ public class HomeController {
   @RequestMapping(value = "/home", method = RequestMethod.GET)
   public ModelAndView home() {
 
-    List<Pokemon> pokemons = pokemonService.getAllPokemons();
+    List<PokemonDto> pokemons = pokemonService.getAllPokemons();
 
-    HomeViewModel viewModel = new HomeViewModel();
+    PokemonViewModel viewModel = new PokemonViewModel();
     viewModel.setPokemons(pokemons);
 
     ModelAndView modelAndView = new ModelAndView("home");

@@ -11,30 +11,33 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pokemonapp.db.datamodel.Pokemon;
-import com.pokemonapp.db.repository.PokemonRepository;
-import com.pokemonapp.web.viewmodel.HomeViewModel;
+import com.pokemonapp.servicelayer.dto.PokemonDto;
+import com.pokemonapp.servicelayer.service.PokemonService;
+import com.pokemonapp.web.viewmodel.PokemonViewModel;
 
 /**
  * Created by sarsovsk on 16.01.2017.
+ *
+ * Rest controller containing CRUD operations for pokemons.
  */
 @RestController
 public class PokemonController {
 
   @Autowired
-  private PokemonRepository pokemonRepository;
+  private PokemonService pokemonService;
 
   @RequestMapping(
       value = "/pokemonList",
       produces = MediaType.APPLICATION_JSON_VALUE,
       method = RequestMethod.GET)
-  public HomeViewModel getPokemonList() {
+  public PokemonViewModel getPokemonList() {
 
-    HomeViewModel viewModel = new HomeViewModel();
-    viewModel.setPokemons(pokemonRepository.findAll());
+    List<PokemonDto> allPokemons = pokemonService.getAllPokemons();
+
+    PokemonViewModel viewModel = new PokemonViewModel();
+    viewModel.setPokemons(allPokemons);
 
     return viewModel;
   }
@@ -43,42 +46,42 @@ public class PokemonController {
       value = "/pokemonListByColor",
       produces = MediaType.APPLICATION_JSON_VALUE,
       method = RequestMethod.GET)
-  public List<Pokemon> getPokemonListByColor(String color) {
-    return pokemonRepository.findByColor(color);
+  public List<PokemonDto> getPokemonListByColor(String color) {
+    return pokemonService.getAllPokemonsByColor(color);
   }
 
   @RequestMapping(
       value = "/addPokemon",
       produces = MediaType.APPLICATION_JSON_VALUE,
       method = RequestMethod.POST)
-  public ResponseEntity<Pokemon> addPokemon(@RequestBody Pokemon pokemon) {
-    Pokemon pokemonAdded = pokemonRepository.save(pokemon);
-    return new ResponseEntity<Pokemon>(pokemonAdded, HttpStatus.CREATED);
+  public ResponseEntity<PokemonDto> addPokemon(@RequestBody PokemonDto pokemon) {
+    PokemonDto pokemonAdded = pokemonService.savePokemon(pokemon);
+    return new ResponseEntity<PokemonDto>(pokemonAdded, HttpStatus.CREATED);
   }
 
   @RequestMapping(
       value = "/updatePokemon",
       produces = MediaType.APPLICATION_JSON_VALUE,
       method = RequestMethod.PUT)
-  public ResponseEntity<Pokemon> updatePokemon(@RequestBody Pokemon pokemon) {
-    Pokemon pokemonupdated = pokemonRepository.save(pokemon);
-    return new ResponseEntity<Pokemon>(pokemonupdated, HttpStatus.OK);
+  public ResponseEntity<PokemonDto> updatePokemon(@RequestBody PokemonDto pokemon) {
+    PokemonDto pokemonUpdated = pokemonService.savePokemon(pokemon);
+    return new ResponseEntity<PokemonDto>(pokemonUpdated, HttpStatus.OK);
   }
 
   @RequestMapping(
       value = "/deletePokemon/{pokemonId}",
       produces = MediaType.APPLICATION_JSON_VALUE,
       method = RequestMethod.DELETE)
-  public ResponseEntity<Pokemon> deletePokemon(@PathVariable Long pokemonId) {
+  public ResponseEntity<PokemonDto> deletePokemon(@PathVariable Long pokemonId) {
 
-    Optional<Pokemon> pokemonFound = pokemonRepository.findById(pokemonId);
+    Optional<PokemonDto> pokemonFound = pokemonService.findById(pokemonId);
 
     if (pokemonFound.isPresent()) {
-      pokemonRepository.delete(pokemonId);
-      return new ResponseEntity<Pokemon>(HttpStatus.NO_CONTENT);
+      pokemonService.delete(pokemonId);
+      return new ResponseEntity<PokemonDto>(HttpStatus.NO_CONTENT);
     }
 
-    return new ResponseEntity<Pokemon>(HttpStatus.NOT_FOUND);
+    return new ResponseEntity<PokemonDto>(HttpStatus.NOT_FOUND);
   }
 
 }

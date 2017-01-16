@@ -46,7 +46,7 @@
     </tr>
 
     <c:forEach items="${viewBean.pokemons}" var="pokemon">
-      <tr id="pokemon-row-${pokemon.id}" class="pokemon-row">
+      <tr class="pokemon-row" data-deletable="${pokemon.deletable}">
         <td class="pokemonId">${pokemon.id}</td>
         <td class="pokemonName">${pokemon.name}</td>
         <td class="pokemonType">${pokemon.type}</td>

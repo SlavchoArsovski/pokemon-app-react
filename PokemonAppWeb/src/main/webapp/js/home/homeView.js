@@ -25,7 +25,8 @@ var homeView = {
     id: undefined,
     name: undefined,
     type: undefined,
-    color: undefined
+    color: undefined,
+    deletable: undefined
   },
 
   initView: function(model) {
@@ -47,16 +48,22 @@ var homeView = {
     var me = this;
 
     $(me.pageComponents.pokemonInfoRow).removeClass('pokemon-row-selected');
+    $(me.pageComponents.deletePokemonBtn).prop("disabled", false);
 
     me.selectedPokemon.id = $(element).find(me.pageComponents.pokemonId).text();
     me.selectedPokemon.name = $(element).find(me.pageComponents.pokemonName).text();
     me.selectedPokemon.type = $(element).find(me.pageComponents.pokemonType).text();
     me.selectedPokemon.color = $(element).find(me.pageComponents.pokemonColor).text();
+    me.selectedPokemon.deletable = $(element).data('deletable');
 
     $(me.pageComponents.pokemonDetailId).text(me.selectedPokemon.id);
     $(me.pageComponents.pokemonDetailName).val(me.selectedPokemon.name);
     $(me.pageComponents.pokemonDetailType).val(me.selectedPokemon.type);
     $(me.pageComponents.pokemonDetailColor).val(me.selectedPokemon.color);
+
+    if (!me.selectedPokemon.deletable) {
+      $(me.pageComponents.deletePokemonBtn).prop("disabled",true)
+    }
 
     $(element).addClass('pokemon-row-selected');
 
@@ -124,17 +131,19 @@ var homeView = {
       templateHtml = templateHtml.replace('{pokemon.color}', pokemon.color);
 
       var row = $(templateHtml);
+
       row.removeClass('pokemon-row-template');
       row.addClass('pokemon-row');
       row.toggle();
+      if (me.selectedPokemon.id && me.selectedPokemon.id == pokemon.id) {
+        row.addClass('pokemon-row-selected');
+      }
+
+      row.data('deletable', pokemon.deletable);
 
       row.click(function() {
         me._pokemonRowClickHandler(this);
       });
-
-      if (me.selectedPokemon.id && me.selectedPokemon.id == pokemon.id) {
-        row.addClass('pokemon-row-selected');
-      }
 
       $(me.pageComponents.pokemonList).append(row);
 

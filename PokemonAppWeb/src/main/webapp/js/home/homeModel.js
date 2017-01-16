@@ -83,7 +83,6 @@ var homeModel = {
             dataType: 'json',
             contentType: 'application/json',
             success: function(responseData) {
-                console.log(responseData);
                 self._getState();
             },
             error: function(jqXHR) {
@@ -112,7 +111,6 @@ var homeModel = {
             dataType: 'json',
             contentType: 'application/json',
             success: function(responseData) {
-                console.log(responseData);
                 self._getState();
             },
             error: function(jqXHR) {
