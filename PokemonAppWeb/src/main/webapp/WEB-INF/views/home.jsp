@@ -23,35 +23,62 @@
 
 <body>
 
-<h1>Pokemon List</h1>
+<div class="pokemon-list">
+  <h1>Pokemon List</h1>
 
-<table class="pokemon-overview-table">
-  <tr>
-    <th>Pokemon ID</th>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Color</th>
-  </tr>
+  <table class="pokemon-overview-table">
+    <tr>
+      <th>Pokemon ID</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Color</th>
+    </tr>
 
-  <c:forEach items="${viewBean.pokemons}" var="pokemon">
-    <tr id="pokemon-first-row-${pokemon.id}" class="pokemon-first-row" data-pokemonid="${pokemon.id}">
-      <td>${pokemon.id}</td>
-      <td>${pokemon.name}</td>
-      <td>${pokemon.type}</td>
-      <td class="pokemon-color">
-        <div style="background-color: ${pokemon.color}"></div>
+    <c:forEach items="${viewBean.pokemons}" var="pokemon">
+      <tr id="pokemon-row-${pokemon.id}" class="pokemon-row">
+        <td class="pokemonId">${pokemon.id}</td>
+        <td class="pokemonName">${pokemon.name}</td>
+        <td class="pokemonType">${pokemon.type}</td>
+        <td class="pokemonColor">
+          <div style="background-color: ${pokemon.color}"></div>
+          <div class="pokemonColorHolder">${pokemon.color}</div>
+        </td>
+      </tr>
+    </c:forEach>
+
+
+  </table>
+
+</div>
+
+<div class="pokemon-detail">
+  <h1>Pokemon Detail</h1>
+
+  <table>
+    <tr>
+      <td>Name</td>
+      <td><input id="pokemonDetailName" type="text" /></td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td><input id="pokemonDetailType" type="text" /></td>
+    </tr>
+    <tr>
+      <td>Color</td>
+      <td><input id="pokemonDetailColor" type="text" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div id="pokemonDetailId" />
       </td>
     </tr>
-    <tr id="pokemon-second-row-${pokemon.id}"  class="pokemon-second-row" style="display: none;">
-      <td colspan="3">
-        <input class="pokemon-name-input" type="text" value="${pokemon.name}">
-        <input class="pokemon-type-input" type="text" value="${pokemon.type}">
-        <input class="pokemon-color-input" type="text" value="${pokemon.color}">
-      </td>
-    </tr>
-  </c:forEach>
+  </table>
 
-</table>
+  <button id="addPokemonBtn">Add</button>
+  <button id="updatePokemonBtn">Update</button>
+  <button id="deletePokemonBtn">Delete</button>
+
+</div>
 
 
 </body>

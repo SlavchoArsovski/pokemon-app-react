@@ -89,11 +89,11 @@ h1 {
   color: #dd5;
 }
 
-.pokemon-color {
+.pokemonColor {
   position: relative;
 }
 
-.pokemon-color > div {
+.pokemonColor > div {
   width: 50%;
   height: 50%;
   top: 25%;
@@ -102,15 +102,19 @@ h1 {
   border: 2px solid BLACK;
 }
 
-.pokemon-first-row {
+.pokemon-row {
   cursor: pointer;
 }
 
-.pokemon-first-row:hover {
+.pokemon-row:hover {
   background-color: gray;
 }
 
-.pokemon-first-row, .pokemon-second-row {
+.pokemon-row-selected {
+  background-color: darkgray;
+}
+
+.pokemon-row {
   border: 1px solid white;
 }
 
@@ -118,4 +122,20 @@ h1 {
 .pokemon-name-input, .pokemon-type-input, .pokemon-color-input {
   display: block;
   margin: 3px;
+}
+
+.pokemon-list, .pokemon-detail {
+  float: left;
+}
+
+.pokemon-detail {
+  margin-left: 50px;
+}
+
+.pokemonColorHolder {
+  display: none;
+}
+
+#pokemonDetailId {
+  display: none;
 }

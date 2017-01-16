@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pokemonapp.db.datamodel.Pokemon;
 import com.pokemonapp.db.repository.PokemonRepository;
+import com.pokemonapp.web.viewmodel.HomeViewModel;
 
 /**
  * Created by sarsovsk on 16.01.2017.
@@ -30,8 +31,12 @@ public class PokemonController {
       value = "/pokemonList",
       produces = MediaType.APPLICATION_JSON_VALUE,
       method = RequestMethod.GET)
-  public List<Pokemon> getPokemonList() {
-    return pokemonRepository.findAll();
+  public HomeViewModel getPokemonList() {
+
+    HomeViewModel viewModel = new HomeViewModel();
+    viewModel.setPokemons(pokemonRepository.findAll());
+
+    return viewModel;
   }
 
   @RequestMapping(
@@ -46,9 +51,9 @@ public class PokemonController {
       value = "/addPokemon",
       produces = MediaType.APPLICATION_JSON_VALUE,
       method = RequestMethod.POST)
-  public ResponseEntity<Void> addPokemon(@RequestBody Pokemon pokemon) {
-    pokemonRepository.save(pokemon);
-    return new ResponseEntity<Void>(HttpStatus.CREATED);
+  public ResponseEntity<Pokemon> addPokemon(@RequestBody Pokemon pokemon) {
+    Pokemon pokemonAdded = pokemonRepository.save(pokemon);
+    return new ResponseEntity<Pokemon>(pokemonAdded, HttpStatus.CREATED);
   }
 
   @RequestMapping(
@@ -56,8 +61,8 @@ public class PokemonController {
       produces = MediaType.APPLICATION_JSON_VALUE,
       method = RequestMethod.PUT)
   public ResponseEntity<Pokemon> updatePokemon(@RequestBody Pokemon pokemon) {
-    pokemonRepository.save(pokemon);
-    return new ResponseEntity<Pokemon>(HttpStatus.OK);
+    Pokemon pokemonupdated = pokemonRepository.save(pokemon);
+    return new ResponseEntity<Pokemon>(pokemonupdated, HttpStatus.OK);
   }
 
   @RequestMapping(
