@@ -80,6 +80,11 @@ var homeView = {
       if (selectedPokemonId) {
         $(me).trigger('deletePokemon', selectedPokemonId);
       }
+
+      $(me.pageComponents.pokemonDetailId).text('');
+      $(me.pageComponents.pokemonDetailName).val('');
+      $(me.pageComponents.pokemonDetailType).val('');
+      $(me.pageComponents.pokemonDetailColor).val('');
     });
 
     $(me.pageComponents.updatePokemonBtn).on('click', function(event) {
