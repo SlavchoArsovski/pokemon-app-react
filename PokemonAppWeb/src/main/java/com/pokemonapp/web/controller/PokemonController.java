@@ -3,8 +3,13 @@ package com.pokemonapp.web.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pokemonapp.db.datamodel.Pokemon;
@@ -19,29 +24,47 @@ public class PokemonController {
   @Autowired
   private PokemonRepository pokemonRepository;
 
-  @RequestMapping(value = "/pokemon-list", method = RequestMethod.GET)
+  @RequestMapping(
+      value = "/pokemonList",
+      produces = MediaType.APPLICATION_JSON_VALUE,
+      method = RequestMethod.GET)
   public List<Pokemon> getPokemonList() {
     return pokemonRepository.findAll();
   }
 
-  @RequestMapping(value = "/pokemon-list-by-color", method = RequestMethod.GET)
+  @RequestMapping(
+      value = "/pokemonListByColor",
+      produces = MediaType.APPLICATION_JSON_VALUE,
+      method = RequestMethod.GET)
   public List<Pokemon> getPokemonListByColor(String color) {
     return pokemonRepository.findByColor(color);
   }
 
-  @RequestMapping(value = "/addPokemon", method = RequestMethod.POST)
-  public void addPokemon(Pokemon pokemon) {
+  @RequestMapping(
+      value = "/addPokemon",
+      produces = MediaType.APPLICATION_JSON_VALUE,
+      method = RequestMethod.POST)
+  public ResponseEntity<Void> addPokemon(@RequestBody Pokemon pokemon) {
     pokemonRepository.save(pokemon);
+    return new ResponseEntity<Void>(HttpStatus.CREATED);
   }
 
-  @RequestMapping(value = "/addPokemon", method = RequestMethod.PUT)
-  public void updatePokemon(Pokemon pokemon) {
+  @RequestMapping(
+      value = "/updatePokemon",
+      produces = MediaType.APPLICATION_JSON_VALUE,
+      method = RequestMethod.PUT)
+  public ResponseEntity<Pokemon> updatePokemon(@RequestBody Pokemon pokemon) {
     pokemonRepository.save(pokemon);
+    return new ResponseEntity<Pokemon>(HttpStatus.OK);
   }
 
-  @RequestMapping(value = "/deletePokemon", method = RequestMethod.DELETE)
-  public void deletePokemon(Long pokemonId) {
+  @RequestMapping(
+      value = "/deletePokemon",
+      produces = MediaType.APPLICATION_JSON_VALUE,
+      method = RequestMethod.DELETE)
+  public ResponseEntity<Pokemon> deletePokemon(@RequestParam Long pokemonId) {
     pokemonRepository.delete(pokemonId);
+    return new ResponseEntity<Pokemon>(HttpStatus.NO_CONTENT);
   }
 
 }

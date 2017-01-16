@@ -1,7 +1,7 @@
 var homeView = {
 
     pageComponents: {
-        pokemonList: '#realEstateTypeDropdown'
+        pokemonList: '#pokemonList'
     },
 
     initView: function (model) {
