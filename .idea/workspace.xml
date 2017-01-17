@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="672da048-43ea-4f63-a4f9-da357c5c05ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PokemonAppRest/PokemonAppRest.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PokemonAppRest/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/configuration/RestConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/RestComponents.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/dto/PokemonRestViewDto.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/dto/PokemonDto.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/dto/PokemonViewDto.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/PokemonServiceImpl.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/PokemonServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserDetailServiceImpl.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserDetailServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/PokemonController.java" afterPath="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/PokemonRestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/PokemonAppWeb_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/PokemonAppWeb_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppDataModel/pom.xml" afterPath="$PROJECT_DIR$/PokemonAppDataModel/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppService/pom.xml" afterPath="$PROJECT_DIR$/PokemonAppService/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/configuration/ServiceConfiguration.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/configuration/ServiceConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/mapper/PokemonMapper.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/mapper/PokemonMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/PokemonService.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/PokemonService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserService.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/PokemonAppWeb.iml" afterPath="$PROJECT_DIR$/PokemonAppWeb/PokemonAppWeb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/pom.xml" afterPath="$PROJECT_DIR$/PokemonAppWeb/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/AppRootConfig.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/AppRootConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/WebConfig.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/WebConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/HomeController.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/LoginController.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/RegistrationController.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/RegistrationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/UserValidator.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/UserValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/PokemonViewModel.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/PokemonViewModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="PokemonApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,14 +58,14 @@
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="37" column="49" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="49" />
+            <state relative-caret-position="48">
+              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1846#1847#0" expanded="true" />
-                <element signature="e#1908#1909#0" expanded="true" />
-                <element signature="e#1982#1983#0" expanded="true" />
-                <element signature="e#2048#2049#0" expanded="true" />
+                <element signature="e#1664#1665#0" expanded="true" />
+                <element signature="e#1726#1727#0" expanded="true" />
+                <element signature="e#1800#1801#0" expanded="true" />
+                <element signature="e#1866#1867#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1379,7 +1350,7 @@
       <workItem from="1484642824276" duration="1629000" />
       <workItem from="1484653631556" duration="5167000" />
       <workItem from="1484659200653" duration="1989000" />
-      <workItem from="1484662785398" duration="22482000" />
+      <workItem from="1484662785398" duration="22658000" />
     </task>
     <task id="LOCAL-00001" summary="deleted target directory">
       <created>1484486367835</created>
@@ -1570,7 +1541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1484685495653</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="cleaup, refactoring">
+      <created>1484690277776</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1484690277776</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1606,7 +1584,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95913000" />
+    <option name="totallyTimeSpent" value="96089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="0" width="1893" height="1042" extended-state="0" />
@@ -1675,7 +1653,8 @@
     <MESSAGE value="cleanup - added javadoc" />
     <MESSAGE value="rest service is not able to be used for anonymous users" />
     <MESSAGE value="maven cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="maven cleanup" />
+    <MESSAGE value="cleaup, refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaup, refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2150,14 +2129,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="37" column="49" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="49" />
+        <state relative-caret-position="48">
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1846#1847#0" expanded="true" />
-            <element signature="e#1908#1909#0" expanded="true" />
-            <element signature="e#1982#1983#0" expanded="true" />
-            <element signature="e#2048#2049#0" expanded="true" />
+            <element signature="e#1664#1665#0" expanded="true" />
+            <element signature="e#1726#1727#0" expanded="true" />
+            <element signature="e#1800#1801#0" expanded="true" />
+            <element signature="e#1866#1867#0" expanded="true" />
           </folding>
         </state>
       </provider>
