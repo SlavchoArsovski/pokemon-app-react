@@ -122,8 +122,10 @@ var homeView = {
 
     var me = this;
 
+    // remove old pokemon table raws
     $(me.pageComponents.pokemonInfoRow).remove();
 
+    // render pokemon table raws
     $.each(model.pokemons, function (index, pokemon) {
 
       var templateHtml =

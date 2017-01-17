@@ -42,7 +42,7 @@ public class PokemonService {
     List<PokemonDto> pokemons = Lists.newArrayList();
 
     pokemons =
-        pokemonRepository. findByColor(color)
+        pokemonRepository.findByColor(color)
             .stream()
             .map(PokemonMapper::mapPokemonDbModelToDto)
             .collect(Collectors.toList());

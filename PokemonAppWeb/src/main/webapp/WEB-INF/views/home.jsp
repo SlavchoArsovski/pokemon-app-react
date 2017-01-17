@@ -35,6 +35,7 @@
       <th>Color</th>
     </tr>
 
+    <!-- template row -->
     <tr style="display: none;" class="pokemon-row-template">
       <td class="pokemonId">{pokemon.id}</td>
       <td class="pokemonName">{pokemon.name}</td>
@@ -44,6 +45,8 @@
         <div class="pokemonColorHolder">{pokemon.color}</div>
       </td>
     </tr>
+
+    <!-- end of template row -->
 
     <c:forEach items="${viewBean.pokemons}" var="pokemon">
       <tr class="pokemon-row" data-deletable="${pokemon.deletable}">

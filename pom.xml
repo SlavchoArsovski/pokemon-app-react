@@ -10,6 +10,9 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <properties>
+
+    <java.version>1.8</java.version>
+
     <springframework.version>4.3.2.RELEASE</springframework.version>
     <spring-data-jpa.version>1.8.2.RELEASE</spring-data-jpa.version>
     <hibernate.version>4.3.11.Final</hibernate.version>
@@ -19,6 +22,9 @@
     <jackson-core.version>2.8.3</jackson-core.version>
     <guava.version>18.0</guava.version>
     <log4j.version>1.2.17</log4j.version>
+
+    <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
+    <maven-war-plugin.version>2.6</maven-war-plugin.version>
   </properties>
 
   <modules>
@@ -192,6 +198,32 @@
     </dependencies>
 
   </dependencyManagement>
+
+  <build>
+
+    <pluginManagement>
+
+      <plugins>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>${maven-war-plugin.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven-compiler-plugin.version}</version>
+          <configuration>
+            <source>${java.version}</source>
+            <target>${java.version}</target>
+          </configuration>
+        </plugin>
+
+      </plugins>
+    </pluginManagement>
+  </build>
 
 
 </project>
