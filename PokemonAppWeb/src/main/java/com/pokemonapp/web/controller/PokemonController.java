@@ -43,14 +43,6 @@ public class PokemonController {
   }
 
   @RequestMapping(
-      value = "/pokemonListByColor",
-      produces = MediaType.APPLICATION_JSON_VALUE,
-      method = RequestMethod.GET)
-  public List<PokemonDto> getPokemonListByColor(String color) {
-    return pokemonService.getAllPokemonsByColor(color);
-  }
-
-  @RequestMapping(
       value = "/addPokemon",
       produces = MediaType.APPLICATION_JSON_VALUE,
       method = RequestMethod.POST)
@@ -58,6 +50,7 @@ public class PokemonController {
     PokemonDto pokemonAdded = pokemonService.savePokemon(pokemon);
     return new ResponseEntity<PokemonDto>(pokemonAdded, HttpStatus.CREATED);
   }
+
 
   @RequestMapping(
       value = "/updatePokemon",

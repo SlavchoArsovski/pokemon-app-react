@@ -35,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
 
         http.authorizeRequests()
-            .antMatchers("/", "/home").hasRole("USER")
+            .antMatchers("/", "/home", "/pokemonList", "/addPokemon", "/updatePokemon", "/deletePokemon/*").hasRole("USER")
             .and()
             .formLogin().loginPage("/login").failureUrl("/login?error").defaultSuccessUrl("/home")
             .usernameParameter("username").passwordParameter("password")
