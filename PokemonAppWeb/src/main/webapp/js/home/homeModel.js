@@ -2,7 +2,7 @@ var homeModel = {
 
     init: function (afterInit) {
 
-        var url = '/pokemon-app/pokemonList';
+        var url = pokemonApp.conf.contextPath + '/pokemonList';
         var data = {};
         var me = this;
 
@@ -30,7 +30,7 @@ var homeModel = {
     },
 
     _getState: function() {
-        var url = '/pokemon-app/pokemonList';
+        var url = pokemonApp.conf.contextPath + '/pokemonList';
         var data = {};
         var me = this;
 
@@ -67,7 +67,7 @@ var homeModel = {
 
     updatePokemon: function (pokemon) {
 
-        var url = '/pokemon-app/updatePokemon';
+        var url = pokemonApp.conf.contextPath + '/updatePokemon';
         var data = {
             id: pokemon.id,
             name: pokemon.name,
@@ -98,7 +98,7 @@ var homeModel = {
 
     deletePokemon: function (pokemonId) {
 
-        var url = '/pokemon-app/deletePokemon/{pokemonId}';
+        var url = pokemonApp.conf.contextPath + '/deletePokemon/{pokemonId}';
         url = url.replace('{pokemonId}', pokemonId);
 
         var data = {};
@@ -126,7 +126,7 @@ var homeModel = {
 
     addPokemon: function(pokemon) {
 
-        var url = '/pokemon-app/addPokemon';
+        var url = pokemonApp.conf.contextPath + '/addPokemon';
         var data = {
             name: pokemon.name,
             type: pokemon.type,

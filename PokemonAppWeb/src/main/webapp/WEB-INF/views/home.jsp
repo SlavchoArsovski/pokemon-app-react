@@ -26,6 +26,14 @@
   <script src="${homeController}" type="application/javascript"></script>
 <body>
 
+<script>
+  pokemonApp = {
+    conf : {
+      contextPath: '${SERVLET_CONTEXT_PATH}'
+    }
+  }
+</script>
+
 <sec:authorize access="hasRole('ROLE_USER')">
   <!-- For login user -->
   <c:url value="/logout" var="logoutUrl"/>
