@@ -39,6 +39,10 @@ public class Pokemon {
   @Column(name = "COLOR", length = 50, nullable = false)
   private String color;
 
+  // no need for many - to - one for this application purpose
+  @Column(name = "USER_NAME", nullable = false)
+  private String userName;
+
   public Long getId() {
     return id;
   }
@@ -69,5 +73,13 @@ public class Pokemon {
 
   public void setColor(String color) {
     this.color = color;
+  }
+
+  public String getUserName() {
+    return userName;
+  }
+
+  public void setUserName(String userName) {
+    this.userName = userName;
   }
 }

@@ -20,6 +20,13 @@ public interface PokemonRepository extends CrudRepository<Pokemon, Long> {
   List<Pokemon> findAll();
 
   /**
+   * Retrieve pokemons for given user.
+   *
+   * @return list of found pokemons.
+   */
+  List<Pokemon> findByUserName(String userName);
+
+  /**
    * Retrieve pokemons filtered by color.
    *
    * @param color the pokemon color.

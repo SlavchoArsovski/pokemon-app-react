@@ -28,9 +28,11 @@ CREATE TABLE POKEMON (
 
 	NAME varchar2(100) not null,
   TYPE varchar2(50) not null,
-  COLOR varchar2(50) not null
+  COLOR varchar2(50) not null,
+  USER_NAME VARCHAR(45) NOT NULL
 );
 
 alter TABLE POKEMON add (
-  constraint PK_POKEMON primary key (ID)
+  constraint PK_POKEMON primary key (ID),
+  constraint FK_POKEMON_PORTAL_USER foreign key (USER_NAME) references PORTAL_USER(USER_NAME)
 );

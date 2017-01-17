@@ -5,9 +5,10 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import com.google.common.collect.Lists;
 import com.pokemonapp.db.datamodel.Pokemon;
 import com.pokemonapp.db.repository.PokemonRepository;
 import com.pokemonapp.servicelayer.dto.PokemonDto;
@@ -24,12 +25,13 @@ public class PokemonServiceImpl implements PokemonService {
   @Autowired
   private PokemonRepository pokemonRepository;
 
-  public List<PokemonDto> getAllPokemons() {
+  public List<PokemonDto> getPokemonsForGivenUser() {
 
-    List<PokemonDto> pokemons = Lists.newArrayList();
+    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+    String name = auth.getName();
 
-    pokemons =
-        pokemonRepository.findAll()
+    List<PokemonDto> pokemons =
+        pokemonRepository.findByUserName(name)
             .stream()
             .map(PokemonMapper::mapPokemonDbModelToDto)
             .collect(Collectors.toList());
@@ -39,9 +41,7 @@ public class PokemonServiceImpl implements PokemonService {
 
   public List<PokemonDto> getAllPokemonsByColor(String color) {
 
-    List<PokemonDto> pokemons = Lists.newArrayList();
-
-    pokemons =
+    List<PokemonDto> pokemons =
         pokemonRepository.findByColor(color)
             .stream()
             .map(PokemonMapper::mapPokemonDbModelToDto)
@@ -52,7 +52,12 @@ public class PokemonServiceImpl implements PokemonService {
 
   public PokemonDto savePokemon(PokemonDto pokemonDto) {
 
+    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+    String name = auth.getName();
+
     Pokemon pokemon = PokemonMapper.mapPokemonDtoToDbModel(pokemonDto);
+    pokemon.setUserName(name);
+
     Pokemon savedPokemon = pokemonRepository.save(pokemon);
 
     return PokemonMapper.mapPokemonDbModelToDto(savedPokemon);

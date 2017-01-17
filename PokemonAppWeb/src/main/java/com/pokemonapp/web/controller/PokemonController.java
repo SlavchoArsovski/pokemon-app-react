@@ -34,7 +34,7 @@ public class PokemonController {
       method = RequestMethod.GET)
   public PokemonViewModel getPokemonList() {
 
-    List<PokemonDto> allPokemons = pokemonService.getAllPokemons();
+    List<PokemonDto> allPokemons = pokemonService.getPokemonsForGivenUser();
 
     PokemonViewModel viewModel = new PokemonViewModel();
     viewModel.setPokemons(allPokemons);
