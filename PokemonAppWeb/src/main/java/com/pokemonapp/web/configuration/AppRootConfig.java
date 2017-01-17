@@ -17,7 +17,7 @@ import com.pokemonapp.servicelayer.configuration.ServiceConfiguration;
  * App root spring configuration.
  */
 @Configuration
-@Import({ ServiceConfiguration.class })
+@Import({ ServiceConfiguration.class, SecurityConfig.class })
 public class AppRootConfig implements ApplicationContextAware {
 
     private ApplicationContext applicationContext;

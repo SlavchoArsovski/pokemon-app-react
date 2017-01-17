@@ -19,12 +19,12 @@ import com.pokemonapp.web.viewmodel.PokemonViewModel;
 public class HomeController {
 
   @Autowired
-  private PokemonService pokemonService;
+  private PokemonService pokemonServiceImpl;
 
   @RequestMapping(value = "/home", method = RequestMethod.GET)
   public ModelAndView home() {
 
-    List<PokemonDto> pokemons = pokemonService.getAllPokemons();
+    List<PokemonDto> pokemons = pokemonServiceImpl.getAllPokemons();
 
     PokemonViewModel viewModel = new PokemonViewModel();
     viewModel.setPokemons(pokemons);

@@ -10,6 +10,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 import com.pokemonapp.web.controller.ControllerComponents;
+import com.pokemonapp.web.validator.ValidatorComponents;
 
 /**
  * Created by sarsovsk on 15.01.2017.
@@ -18,7 +19,7 @@ import com.pokemonapp.web.controller.ControllerComponents;
  */
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackageClasses = { ControllerComponents.class})
+@ComponentScan(basePackageClasses = { ControllerComponents.class, ValidatorComponents.class})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     public static final String VIEWS_PATH = "/WEB-INF/views/";

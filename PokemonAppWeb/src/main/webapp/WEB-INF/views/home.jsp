@@ -26,6 +26,31 @@
   <script src="${homeController}" type="application/javascript"></script>
 <body>
 
+<sec:authorize access="hasRole('ROLE_USER')">
+  <!-- For login user -->
+  <c:url value="/logout" var="logoutUrl"/>
+  <form action="${logoutUrl}" method="post" id="logoutForm">
+    <input type="hidden" name="${_csrf.parameterName}"
+           value="${_csrf.token}"/>
+  </form>
+  <script>
+    function formSubmit() {
+      document.getElementById("logoutForm").submit();
+    }
+  </script>
+
+  <c:if test="${pageContext.request.userPrincipal.name != null}">
+    <div>
+      User: ${pageContext.request.userPrincipal.name} |
+      <a href="javascript:formSubmit()">
+        Logout
+      </a>
+    </div>
+  </c:if>
+
+
+</sec:authorize>
+
 <h1>Pokemon List</h1>
 
 <h2>Filter pokemons by color</h2>
