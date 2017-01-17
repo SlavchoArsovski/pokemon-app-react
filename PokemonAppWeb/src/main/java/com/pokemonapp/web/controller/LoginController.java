@@ -39,7 +39,6 @@ public class LoginController {
         model.setViewName("login");
 
         return model;
-
     }
 
     /**
@@ -60,8 +59,5 @@ public class LoginController {
 
         model.setViewName("403");
         return model;
-
     }
-
-
 }

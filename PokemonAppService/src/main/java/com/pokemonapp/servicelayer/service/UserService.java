@@ -16,10 +16,11 @@ public interface UserService {
   /**
    * Saves new user with given role.
    *
-   * @param user the user.
+   * @param userName the user name.
+   * @param userPassword the user password.
    * @param role the role of the user.
    */
-  void saveNewUser(User user, String role);
+  void saveNewUser(String userName, String userPassword, String role);
 
   /**
    * Find user by user name.

@@ -5,7 +5,7 @@ package com.pokemonapp.servicelayer.dto;
  *
  * Pokemon Dto.
  */
-public class PokemonDto {
+public class PokemonViewDto {
 
   private Long id;
   private String name;

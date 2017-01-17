@@ -3,7 +3,7 @@ package com.pokemonapp.servicelayer.service;
 import java.util.List;
 import java.util.Optional;
 
-import com.pokemonapp.servicelayer.dto.PokemonDto;
+import com.pokemonapp.servicelayer.dto.PokemonViewDto;
 
 /**
  * Created by sarsovsk on 17.01.2017.
@@ -15,15 +15,15 @@ public interface PokemonService {
   /**
    * @return all pokemons related to logged in user.
    */
-  List<PokemonDto> getPokemonsForLoggedInUser();
+  List<PokemonViewDto> getPokemonsForLoggedInUser();
 
   /**
    * Saves pokemon.
    *
-   * @param pokemonDto the pokemon to be saved.
+   * @param pokemonViewDto the pokemon to be saved.
    * @return saved pokemon.
    */
-  PokemonDto savePokemon(PokemonDto pokemonDto);
+  PokemonViewDto savePokemon(PokemonViewDto pokemonViewDto);
 
   /**
    * Finds pokemon by its id.
@@ -31,7 +31,7 @@ public interface PokemonService {
    * @param pokemonId the pokemon id.
    * @return found pokemon.
    */
-  Optional<PokemonDto> findById(Long pokemonId);
+  Optional<PokemonViewDto> findById(Long pokemonId);
 
   /**
    * Deteles pokemon by its id.

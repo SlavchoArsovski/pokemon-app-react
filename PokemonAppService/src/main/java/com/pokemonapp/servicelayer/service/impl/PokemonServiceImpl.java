@@ -1,4 +1,4 @@
-package com.pokemonapp.servicelayer.service;
+package com.pokemonapp.servicelayer.service.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,8 +11,9 @@ import org.springframework.stereotype.Service;
 
 import com.pokemonapp.db.datamodel.Pokemon;
 import com.pokemonapp.db.repository.PokemonRepository;
-import com.pokemonapp.servicelayer.dto.PokemonDto;
+import com.pokemonapp.servicelayer.dto.PokemonViewDto;
 import com.pokemonapp.servicelayer.mapper.PokemonMapper;
+import com.pokemonapp.servicelayer.service.PokemonService;
 
 /**
  * Created by sarsovsk on 15.01.2017.
@@ -25,12 +26,12 @@ public class PokemonServiceImpl implements PokemonService {
   @Autowired
   private PokemonRepository pokemonRepository;
 
-  public List<PokemonDto> getPokemonsForLoggedInUser() {
+  public List<PokemonViewDto> getPokemonsForLoggedInUser() {
 
     Authentication auth = SecurityContextHolder.getContext().getAuthentication();
     String name = auth.getName();
 
-    List<PokemonDto> pokemons =
+    List<PokemonViewDto> pokemons =
         pokemonRepository.findByUserName(name)
             .stream()
             .map(PokemonMapper::mapPokemonDbModelToDto)
@@ -39,12 +40,12 @@ public class PokemonServiceImpl implements PokemonService {
     return pokemons;
   }
 
-  public PokemonDto savePokemon(PokemonDto pokemonDto) {
+  public PokemonViewDto savePokemon(PokemonViewDto pokemonViewDto) {
 
     Authentication auth = SecurityContextHolder.getContext().getAuthentication();
     String name = auth.getName();
 
-    Pokemon pokemon = PokemonMapper.mapPokemonDtoToDbModel(pokemonDto);
+    Pokemon pokemon = PokemonMapper.mapPokemonDtoToDbModel(pokemonViewDto);
     pokemon.setUserName(name);
 
     Pokemon savedPokemon = pokemonRepository.save(pokemon);
@@ -52,7 +53,7 @@ public class PokemonServiceImpl implements PokemonService {
     return PokemonMapper.mapPokemonDbModelToDto(savedPokemon);
   }
 
-  public Optional<PokemonDto> findById(Long pokemonId) {
+  public Optional<PokemonViewDto> findById(Long pokemonId) {
 
     Optional<Pokemon> pokemonById = pokemonRepository.findById(pokemonId);
 

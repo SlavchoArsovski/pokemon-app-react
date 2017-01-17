@@ -1,4 +1,4 @@
-package com.pokemonapp.servicelayer.service;
+package com.pokemonapp.servicelayer.service.impl;
 
 import java.util.HashSet;
 import java.util.List;
@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import com.pokemonapp.db.datamodel.User;
 import com.pokemonapp.db.datamodel.UserRole;
+import com.pokemonapp.servicelayer.service.UserService;
 
 /**
  * Created by sarsovsk on 17.01.2017.

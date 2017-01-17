@@ -1,18 +1,19 @@
-package com.pokemonapp.servicelayer.service;
+package com.pokemonapp.servicelayer.service.impl;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.pokemonapp.db.datamodel.User;
 import com.pokemonapp.db.datamodel.UserRole;
 import com.pokemonapp.db.repository.UserRepository;
 import com.pokemonapp.db.repository.UserRoleRepository;
+import com.pokemonapp.servicelayer.service.UserService;
 
 /**
  * Created by sarsovsk on 17.01.2017.
@@ -31,18 +32,21 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
-    @Qualifier("CustomUserDetailService")
-    private UserDetailsService userDetailsService;
-
+    @Transactional
     @Override
-    public void saveNewUser(User user, String role) {
+    public void saveNewUser(String userName, String userPassword, String role) {
 
-        String passwordEncoded = passwordEncoder.encode(user.getPassword());
+        String passwordEncoded = passwordEncoder.encode(userPassword);
+
+        // add user
+        User user = new User();
+        user.setUserName(userName);
         user.setPassword(passwordEncoded);
+        user.setEnabled(true);
 
         userRepository.save(user);
 
+        // add user roles
         UserRole userRole = new UserRole();
         userRole.setUserName(user.getUserName());
         userRole.setRole(role);
@@ -59,5 +63,4 @@ public class UserServiceImpl implements UserService {
     public List<UserRole> findUserRoles(String userName) {
         return userRoleRepository.findByUserName(userName);
     }
-
 }

@@ -20,8 +20,10 @@ public class UserValidator implements Validator {
 
     private static final String EMPTY_USER_NAME_MESSAGE = "User field must not be empty";
     private static final String DUPLICATE_USER_NAME_MESSAGE = "User already exists";
-    private static final String WRONG_LENGTH_USER_NAME_MESSAGE = "The length of the user name should be between 6 and 12 characters.";
-    private static final String WRONG_LENGTH_PASSWORD_MESSAGE = "The length of the password should be between 6 and 12 characters.";
+    private static final String WRONG_LENGTH_USER_NAME_MESSAGE =
+        "The length of the user name should be between 6 and 12 characters.";
+    private static final String WRONG_LENGTH_PASSWORD_MESSAGE =
+        "The length of the password should be between 6 and 12 characters.";
     private static final String EMPTY_PASSWORD_MESSAGE = "Password must not be empty";
     private static final String PASSWORD_CONFIRM_NOT_MATCHED_MESSAGE = "Password and Password confirmation do not match";
 

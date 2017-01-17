@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.pokemonapp.servicelayer.dto.PokemonDto;
+import com.pokemonapp.servicelayer.dto.PokemonViewDto;
 import com.pokemonapp.servicelayer.service.PokemonService;
 import com.pokemonapp.web.viewmodel.PokemonViewModel;
 
@@ -20,19 +20,27 @@ import com.pokemonapp.web.viewmodel.PokemonViewModel;
 @Controller
 public class HomeController {
 
+  private static final String HOME_VIEW_NAME = "home";
+  private static final String VIEW_BEAN = "viewBean";
+
   @Autowired
   private PokemonService pokemonServiceImpl;
 
+  /**
+   * Handler for home page.
+   *
+   * @return {@link ModelAndView}.
+   */
   @RequestMapping(value = "/home", method = RequestMethod.GET)
   public ModelAndView home() {
 
-    List<PokemonDto> pokemons = pokemonServiceImpl.getPokemonsForLoggedInUser();
+    List<PokemonViewDto> pokemons = pokemonServiceImpl.getPokemonsForLoggedInUser();
 
     PokemonViewModel viewModel = new PokemonViewModel();
     viewModel.setPokemons(pokemons);
 
-    ModelAndView modelAndView = new ModelAndView("home");
-    modelAndView.addObject("viewBean", viewModel);
+    ModelAndView modelAndView = new ModelAndView(HOME_VIEW_NAME);
+    modelAndView.addObject(VIEW_BEAN, viewModel);
 
     return modelAndView;
   }

@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="672da048-43ea-4f63-a4f9-da357c5c05ac" name="Default" comment="rest service is not able to be used for anonymous users">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_187.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_oracle_ojdbc6_12_1_0_1_0.xml" afterPath="" />
+    <list default="true" id="672da048-43ea-4f63-a4f9-da357c5c05ac" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PokemonAppRest/PokemonAppRest.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PokemonAppRest/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/configuration/RestConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/RestComponents.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/dto/PokemonRestViewDto.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/dto/PokemonDto.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/dto/PokemonViewDto.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/PokemonServiceImpl.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/PokemonServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserDetailServiceImpl.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserDetailServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/PokemonController.java" afterPath="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/PokemonRestController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/PokemonAppWeb_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/PokemonAppWeb_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppDataModel/PokemonAppDataModel.iml" afterPath="$PROJECT_DIR$/PokemonAppDataModel/PokemonAppDataModel.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppDataModel/pom.xml" afterPath="$PROJECT_DIR$/PokemonAppDataModel/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppService/PokemonAppService.iml" afterPath="$PROJECT_DIR$/PokemonAppService/PokemonAppService.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppService/pom.xml" afterPath="$PROJECT_DIR$/PokemonAppService/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/configuration/ServiceConfiguration.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/configuration/ServiceConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/mapper/PokemonMapper.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/mapper/PokemonMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/PokemonService.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/PokemonService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserService.java" afterPath="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/PokemonAppWeb.iml" afterPath="$PROJECT_DIR$/PokemonAppWeb/PokemonAppWeb.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/pom.xml" afterPath="$PROJECT_DIR$/PokemonAppWeb/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/AppRootConfig.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/AppRootConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/WebConfig.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/WebConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/HomeController.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/HomeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/LoginController.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/RegistrationController.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/RegistrationController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/UserValidator.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/UserValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/PokemonViewModel.java" afterPath="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/PokemonViewModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="PokemonApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,6 +41,7 @@
     <ignored path="$PROJECT_DIR$/PokemonAppDataModel/target/" />
     <ignored path="$PROJECT_DIR$/PokemonAppService/target/" />
     <ignored path="$PROJECT_DIR$/PokemonAppWeb/target/" />
+    <ignored path="$PROJECT_DIR$/PokemonAppRest/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,14 +58,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PokemonServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/PokemonServiceImpl.java">
+      <file leaf-file-name="RegistrationController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/RegistrationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="1190">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding>
-                <element signature="e#1950#1951#0" expanded="true" />
-                <element signature="e#1995#1996#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1154#1155#0" expanded="true" />
+                <element signature="e#1204#1205#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="541">
+              <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="37" column="49" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1846#1847#0" expanded="true" />
+                <element signature="e#1908#1909#0" expanded="true" />
+                <element signature="e#1982#1983#0" expanded="true" />
+                <element signature="e#2048#2049#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,65 +103,33 @@
       <file leaf-file-name="ServiceConfiguration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/configuration/ServiceConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/SecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractRequestMatcherRegistry.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.1.3.RELEASE/spring-security-config-4.1.3.RELEASE.jar!/org/springframework/security/config/annotation/web/AbstractRequestMatcherRegistry.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PokemonController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/PokemonController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="UserDetailServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserDetailServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserDetailServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="464">
+              <caret line="38" column="47" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1999#2017#0" expanded="true" />
+                <element signature="e#2060#2078#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokemonRestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/PokemonRestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,10 +138,23 @@
       <file leaf-file-name="PokemonService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/PokemonService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="189">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokemonServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/PokemonServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11">
+              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+              <folding>
+                <element signature="e#2046#2047#0" expanded="true" />
+                <element signature="e#2091#2092#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,18 +163,18 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PokemonAppService/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+            <state relative-caret-position="371">
+              <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PokemonAppDataModel/pom.xml">
+      <file leaf-file-name="ControllerComponents.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/ControllerComponents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-105">
-              <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+            <state relative-caret-position="119">
+              <caret line="7" column="37" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -152,8 +185,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -168,18 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/service/configuration/ServiceConfiguration.java" />
-        <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/ServiceComponents.java" />
-        <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/configuration/ServiceConfiguration.java" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/ControllerComponents.java" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/WEB-INF/views/hello.jsp" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/log4j.properties" />
-        <option value="$PROJECT_DIR$/PokemonAppDataModel/src/main/java/com/pokemonapp/db/configuration/EntityManagerFactoryProvider.java" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/log4j.xml" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/Hello.java" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/resources/config.properties" />
-        <option value="$PROJECT_DIR$/PokemonAppDataModel/src/test/resources/config-test.properties" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/css/home.css" />
         <option value="$PROJECT_DIR$/PokemonAppDataModel/src/test/java/com/pokemonapp/db/repository/PokemonRepositoryTest.java" />
         <option value="$PROJECT_DIR$/PokemonAppDataModel/PokemonAppDataModel.iml" />
@@ -187,27 +208,16 @@
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/HomeViewModel.java" />
         <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/dto/PokemonDto.java" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/js/home/homeModel.js" />
-        <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/mapper/PokemonMapper.java" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/js/home/homeView.js" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/PokemonAppService/pom.xml" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/pom.xml" />
-        <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserService.java" />
         <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/SpringSecurityInitializer.java" />
         <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserDetailServiceImpl.java" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/AppRootConfig.java" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/WEB-INF/views/login.jsp" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/WEB-INF/views/403.jsp" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/UserViewModel.java" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/PokemonViewModel.java" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/ValidatorComponents.java" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/WebConfig.java" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/WEB-INF/views/registration.jsp" />
-        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/UserValidator.java" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/css/main.css" />
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/WEB-INF/views/home.jsp" />
         <option value="$PROJECT_DIR$/PokemonAppDataModel/src/main/resources/db/sql/pokemon-db-insert-initial-data.sql" />
@@ -219,6 +229,29 @@
         <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/PokemonController.java" />
         <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/PokemonService.java" />
         <option value="$PROJECT_DIR$/PokemonAppDataModel/pom.xml" />
+        <option value="$PROJECT_DIR$/PokemonAppService/pom.xml" />
+        <option value="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/PokemonController.java" />
+        <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/dto/PokemonViewDto.java" />
+        <option value="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/dto/PokemonViewDto.java" />
+        <option value="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/dto/PokemonRestViewDto.java" />
+        <option value="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/PokemonController.java" />
+        <option value="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/PokemonRestController.java" />
+        <option value="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/RestComponents.java" />
+        <option value="$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/configuration/RestConfig.java" />
+        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/WebConfig.java" />
+        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/AppRootConfig.java" />
+        <option value="$PROJECT_DIR$/PokemonAppRest/pom.xml" />
+        <option value="$PROJECT_DIR$/PokemonAppWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/mapper/PokemonMapper.java" />
+        <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/PokemonServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/UserValidator.java" />
+        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserService.java" />
+        <option value="$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/RegistrationController.java" />
+        <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/configuration/ServiceConfiguration.java" />
+        <option value="$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -251,7 +284,14 @@
     </option>
   </component>
   <component name="MavenProjectNavigator">
-    <treeState />
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1" />
@@ -406,6 +446,112 @@
               <option name="myItemId" value="servicelayer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonAppService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servicelayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonAppService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servicelayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonAppService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servicelayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -455,6 +601,76 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonAppDataModel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonAppDataModel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonAppDataModel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -472,7 +688,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="Pokemo&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/PokemonController.java&#10;Secu&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/SecurityConfig.java&#10;Login&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/LoginController.java&#10;UserValida&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/UserValidator.java&#10;UserRe&#9;PSI&#9;JAVA://com.pokemonapp.db.repository.UserRepository&#10;Pokemon.java&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppDataModel/src/main/java/com/pokemonapp/db/datamodel/Pokemon.java&#10;ini&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppDataModel/src/main/resources/db/sql/pokemon-db-insert-initial-data.sql" />
+    <property name="SearchEverywhereHistoryKey" value="UseService&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserService.java&#10;PokemonViewModel&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/PokemonViewModel.java&#10;Pokemo&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/PokemonController.java&#10;Secu&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/SecurityConfig.java&#10;Login&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/LoginController.java&#10;UserValida&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/UserValidator.java&#10;UserRe&#9;PSI&#9;JAVA://com.pokemonapp.db.repository.UserRepository&#10;Pokemon.java&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppDataModel/src/main/java/com/pokemonapp/db/datamodel/Pokemon.java&#10;ini&#9;FILE&#9;file://C:/data/PokemonApp/PokemonAppDataModel/src/main/resources/db/sql/pokemon-db-insert-initial-data.sql" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -480,6 +696,7 @@
       <recent name="C:\data\PokemonApp\PokemonAppWeb\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.pokemonapp.rest" />
       <recent name="com.pokemonapp.web" />
       <recent name="com.pokemonapp.db" />
     </key>
@@ -487,11 +704,11 @@
       <recent name="com.pokemonapp.servicelayer.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.pokemonapp.rest.configuration" />
+      <recent name="com.pokemonapp.rest.controller" />
+      <recent name="com.pokemonapp.rest.controller.dto" />
+      <recent name="com.pokemonapp.servicelayer.dto" />
       <recent name="com.pokemonapp.web.validator" />
-      <recent name="com.pokemonapp.web.viewmodel" />
-      <recent name="com.pokemonapp.servicelayer.service" />
-      <recent name="com.pokemonapp.web.controller" />
-      <recent name="com.pokemonapp.web.configuration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\data\PokemonApp\PokemonAppWeb\src\main\webapp\css\images" />
@@ -1162,7 +1379,7 @@
       <workItem from="1484642824276" duration="1629000" />
       <workItem from="1484653631556" duration="5167000" />
       <workItem from="1484659200653" duration="1989000" />
-      <workItem from="1484662785398" duration="17851000" />
+      <workItem from="1484662785398" duration="22482000" />
     </task>
     <task id="LOCAL-00001" summary="deleted target directory">
       <created>1484486367835</created>
@@ -1346,7 +1563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1484685248996</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="maven cleanup">
+      <created>1484685495653</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1484685495653</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1382,7 +1606,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91282000" />
+    <option name="totallyTimeSpent" value="95913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="0" width="1893" height="1042" extended-state="0" />
@@ -1392,11 +1616,11 @@
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21510416" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21470432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18966436" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18966436" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46631017" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1410,7 +1634,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53846157" sideWeight="0.50208336" order="12" side_tool="false" content_ui="tabs" x="0" y="363" width="1920" height="313" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25572723" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25412893" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32834226" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -1445,13 +1669,13 @@
     <MESSAGE value="implemented CRUD operations on fronend" />
     <MESSAGE value="yellow pokemons are not able to be deleted" />
     <MESSAGE value="added color picker" />
-    <MESSAGE value="maven cleanup" />
     <MESSAGE value="added color filter" />
     <MESSAGE value="added users" />
     <MESSAGE value="connected users with pokemons" />
     <MESSAGE value="cleanup - added javadoc" />
     <MESSAGE value="rest service is not able to be used for anonymous users" />
-    <option name="LAST_COMMIT_MESSAGE" value="rest service is not able to be used for anonymous users" />
+    <MESSAGE value="maven cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1463,8 +1687,8 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserDetailServiceImpl.java</url>
-          <line>37</line>
+          <url>file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserDetailServiceImpl.java</url>
+          <line>38</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
@@ -1478,209 +1702,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PokemonAppDataModel/src/main/resources/ehcache-orm-default.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppDataModel/src/test/java/com/pokemonapp/db/repository/PokemonRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="37" column="49" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonApp.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/WebInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/js/jquery-ui.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/js/jquery-3.1.0.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="2481" selection-start-line="1" selection-start-column="2481" selection-end-line="1" selection-end-column="2481" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/css/jquery-ui.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="986" selection-start-line="6" selection-start-column="986" selection-end-line="6" selection-end-column="986" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/js/home/homeModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="110" column="29" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/js/home/homeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/js/home/homeView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="263" column="5" selection-start-line="263" selection-start-column="5" selection-end-line="263" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="44" column="41" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/ServiceComponents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.1.3.RELEASE/spring-security-core-4.1.3.RELEASE.jar!/org/springframework/security/crypto/password/PasswordEncoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/AppRootConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/WEB-INF/views/403.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/UserViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppDataModel/src/test/resources/config-test.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/ControllerComponents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/PokemonViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/ValidatorComponents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/webapp/WEB-INF/views/registration.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="879">
@@ -1721,14 +1742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/SpringSecurityInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.1.3.RELEASE/spring-security-core-4.1.3.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1761,55 +1774,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/UserValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PokemonAppDataModel/src/main/java/com/pokemonapp/db/repository/UserRoleRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1596#1597#0" expanded="true" />
-            <element signature="e#1670#1671#0" expanded="true" />
-            <element signature="e#1736#1737#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="54" column="51" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1838,17 +1807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserDetailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1999#2017#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.1.3.RELEASE/spring-security-config-4.1.3.RELEASE.jar!/org/springframework/security/config/annotation/web/AbstractRequestMatcherRegistry.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1857,9 +1815,130 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemon/rest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppDataModel/PokemonAppDataModel.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppDataModel/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/PokemonRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/dto/PokemonViewDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/dto/PokemonViewDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/dto/PokemonRestViewDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#388#389#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/RestComponents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.2.RELEASE/spring-webmvc-4.3.2.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/EnableWebMvc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#3568#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/PokemonViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/viewmodel/UserViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/SpringSecurityInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/WebInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="629">
           <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1867,31 +1946,183 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/PokemonServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#1950#1951#0" expanded="true" />
-            <element signature="e#1995#1996#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/PokemonController.java">
+    <entry file="file://$PROJECT_DIR$/PokemonAppRest/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        <state relative-caret-position="507">
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/mapper/PokemonMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/dto/PokemonViewDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/ServiceComponents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3710">
+          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/validator/UserValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/AppRootConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/configuration/RestConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/configuration/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="14" column="0" selection-start-line="9" selection-start-column="60" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/ControllerComponents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppWeb/src/main/java/com/pokemonapp/web/controller/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+            <element signature="e#1204#1205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppRest/src/main/java/com/pokemonapp/rest/controller/PokemonRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppService/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/PokemonService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="189">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserDetailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="38" column="47" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2060#2078#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1900,33 +2131,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/configuration/ServiceConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppService/pom.xml">
+    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/PokemonServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="-11">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding>
+            <element signature="e#2046#2047#0" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/PokemonAppService/src/main/java/com/pokemonapp/servicelayer/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokemonAppDataModel/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="99">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1846#1847#0" expanded="true" />
+            <element signature="e#1908#1909#0" expanded="true" />
+            <element signature="e#1982#1983#0" expanded="true" />
+            <element signature="e#2048#2049#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="PokemonAppDataModel" />
+        <module name="PokemonAppRest" />
         <module name="PokemonAppService" />
         <module name="PokemonAppWeb" />
       </profile>
@@ -30,6 +31,7 @@
     <bytecodeTargetLevel>
       <module name="PokemonApp" target="1.5" />
       <module name="PokemonAppDataModel" target="1.8" />
+      <module name="PokemonAppRest" target="1.8" />
       <module name="PokemonAppService" target="1.8" />
       <module name="PokemonAppWeb" target="1.8" />
     </bytecodeTargetLevel>

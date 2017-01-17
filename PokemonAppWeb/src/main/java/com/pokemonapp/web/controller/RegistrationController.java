@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.pokemonapp.db.datamodel.User;
 import com.pokemonapp.servicelayer.service.UserService;
 import com.pokemonapp.web.validator.UserValidator;
 import com.pokemonapp.web.viewmodel.UserViewModel;
@@ -36,6 +35,12 @@ public class RegistrationController {
         binder.setValidator(userValidator);
     }
 
+    /**
+     * Handle registration page.
+     *
+     * @param model the page model.
+     * @return the view name.
+     */
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(Model model) {
 
@@ -44,6 +49,15 @@ public class RegistrationController {
         return REGISTRATION_VIEW_NAME;
     }
 
+    /**
+     *
+     * Handles registration of new user.
+     *
+     * @param userViewModel the user view model.
+     * @param bindingResult the{@link BindingResult}.
+     * @param model the page model.
+     * @return view name.
+     */
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(
             @ModelAttribute("userForm") @Validated UserViewModel userViewModel,
@@ -55,12 +69,10 @@ public class RegistrationController {
             return REGISTRATION_VIEW_NAME;
         }
 
-        User user = new User();
-        user.setUserName(userViewModel.getUserName());
-        user.setPassword(userViewModel.getPassword());
-        user.setEnabled(true);
-
-        userService.saveNewUser(user, "ROLE_USER");
+        userService.saveNewUser(
+            userViewModel.getUserName(),
+            userViewModel.getPassword() ,
+            "ROLE_USER");
 
         return "redirect:/login";
     }

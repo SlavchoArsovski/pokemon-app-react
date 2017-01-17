@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.io.Resource;
 
+import com.pokemonapp.rest.configuration.RestConfiguration;
 import com.pokemonapp.servicelayer.configuration.ServiceConfiguration;
 
 /**

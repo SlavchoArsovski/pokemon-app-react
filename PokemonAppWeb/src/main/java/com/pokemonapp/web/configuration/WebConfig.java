@@ -3,12 +3,14 @@ package com.pokemonapp.web.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import com.pokemonapp.rest.configuration.RestConfiguration;
 import com.pokemonapp.web.controller.ControllerComponents;
 import com.pokemonapp.web.validator.ValidatorComponents;
 
@@ -19,6 +21,7 @@ import com.pokemonapp.web.validator.ValidatorComponents;
  */
 @EnableWebMvc
 @Configuration
+@Import(RestConfiguration.class)
 @ComponentScan(basePackageClasses = { ControllerComponents.class, ValidatorComponents.class})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
