@@ -14,6 +14,8 @@ import com.pokemonapp.web.viewmodel.PokemonViewModel;
 
 /**
  * Created by sarsovsk on 15.01.2017.
+ *
+ * Controller for the home page.
  */
 @Controller
 public class HomeController {
@@ -24,7 +26,7 @@ public class HomeController {
   @RequestMapping(value = "/home", method = RequestMethod.GET)
   public ModelAndView home() {
 
-    List<PokemonDto> pokemons = pokemonServiceImpl.getPokemonsForGivenUser();
+    List<PokemonDto> pokemons = pokemonServiceImpl.getPokemonsForLoggedInUser();
 
     PokemonViewModel viewModel = new PokemonViewModel();
     viewModel.setPokemons(pokemons);

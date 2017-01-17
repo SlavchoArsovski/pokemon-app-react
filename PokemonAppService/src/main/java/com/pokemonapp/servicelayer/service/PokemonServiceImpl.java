@@ -25,24 +25,13 @@ public class PokemonServiceImpl implements PokemonService {
   @Autowired
   private PokemonRepository pokemonRepository;
 
-  public List<PokemonDto> getPokemonsForGivenUser() {
+  public List<PokemonDto> getPokemonsForLoggedInUser() {
 
     Authentication auth = SecurityContextHolder.getContext().getAuthentication();
     String name = auth.getName();
 
     List<PokemonDto> pokemons =
         pokemonRepository.findByUserName(name)
-            .stream()
-            .map(PokemonMapper::mapPokemonDbModelToDto)
-            .collect(Collectors.toList());
-
-    return pokemons;
-  }
-
-  public List<PokemonDto> getAllPokemonsByColor(String color) {
-
-    List<PokemonDto> pokemons =
-        pokemonRepository.findByColor(color)
             .stream()
             .map(PokemonMapper::mapPokemonDbModelToDto)
             .collect(Collectors.toList());

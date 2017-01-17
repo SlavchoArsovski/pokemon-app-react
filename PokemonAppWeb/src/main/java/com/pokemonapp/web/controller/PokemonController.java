@@ -28,13 +28,18 @@ public class PokemonController {
   @Autowired
   private PokemonService pokemonService;
 
+  /**
+   * Returns pokemon list for the logged in user.
+   *
+   * @return model containing the list of pokemons.
+   */
   @RequestMapping(
       value = "/pokemonList",
       produces = MediaType.APPLICATION_JSON_VALUE,
       method = RequestMethod.GET)
   public PokemonViewModel getPokemonList() {
 
-    List<PokemonDto> allPokemons = pokemonService.getPokemonsForGivenUser();
+    List<PokemonDto> allPokemons = pokemonService.getPokemonsForLoggedInUser();
 
     PokemonViewModel viewModel = new PokemonViewModel();
     viewModel.setPokemons(allPokemons);
@@ -42,6 +47,12 @@ public class PokemonController {
     return viewModel;
   }
 
+  /**
+   * Adds new pokemon for the logged in user.
+   * @param pokemon the pokemon detail.
+   *
+   * @return added pokemon detail.
+   */
   @RequestMapping(
       value = "/addPokemon",
       produces = MediaType.APPLICATION_JSON_VALUE,
@@ -52,6 +63,14 @@ public class PokemonController {
   }
 
 
+  /**
+   * Updates existing pokemon which belongs to the logged in user.
+   *
+   * TODO: should be checked if the pokemon belongs to the given user.
+   * @param pokemon the pokemon detail updated.
+   *
+   * @return added pokemon.
+   */
   @RequestMapping(
       value = "/updatePokemon",
       produces = MediaType.APPLICATION_JSON_VALUE,
@@ -61,6 +80,13 @@ public class PokemonController {
     return new ResponseEntity<PokemonDto>(pokemonUpdated, HttpStatus.OK);
   }
 
+  /**
+   * Deletes pokemon for given id.
+   *
+   * TODO: should be checked if the pokemon belongs to the given user.
+   * @param pokemonId the pokemon id.
+   * @return the deleted pokemon.
+   */
   @RequestMapping(
       value = "/deletePokemon/{pokemonId}",
       produces = MediaType.APPLICATION_JSON_VALUE,
