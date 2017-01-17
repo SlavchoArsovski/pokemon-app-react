@@ -132,6 +132,8 @@ var homeView = {
       templateHtml = templateHtml.replace('{pokemon.id}', pokemon.id);
       templateHtml = templateHtml.replace('{pokemon.name}', pokemon.name);
       templateHtml = templateHtml.replace('{pokemon.type}', pokemon.type);
+      templateHtml = templateHtml.replace('<!--', '');
+      templateHtml = templateHtml.replace('-->', '');
       templateHtml = templateHtml.replace('{pokemon.color}', pokemon.color);
       templateHtml = templateHtml.replace('{pokemon.color}', pokemon.color);
 

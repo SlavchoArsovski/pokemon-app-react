@@ -40,7 +40,7 @@
       <td class="pokemonName">{pokemon.name}</td>
       <td class="pokemonType">{pokemon.type}</td>
       <td class="pokemonColor">
-        <div style="background-color: {pokemon.color}"></div>
+        <!-- <div style="background-color:{pokemon.color};"></div> -->
         <div class="pokemonColorHolder">{pokemon.color}</div>
       </td>
     </tr>
@@ -76,7 +76,7 @@
     </tr>
     <tr>
       <td>Color</td>
-      <td><input id="pokemonDetailColor" type="text" /></td>
+      <td><input id="pokemonDetailColor" type="color" /></td>
     </tr>
     <tr>
       <td colspan="2">
