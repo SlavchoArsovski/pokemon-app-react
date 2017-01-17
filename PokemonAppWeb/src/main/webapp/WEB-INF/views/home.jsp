@@ -5,7 +5,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <spring:url value="/css/main.css" var="mainCss" />
+<spring:url value="/css/jquery-ui.min.css" var="jqueryCss" />
 <spring:url value="/js/jquery-3.1.0.min.js" var="jqueryJs" />
+<spring:url value="/js/jquery-ui.min.js" var="jqueryUiJs" />
 <spring:url value="/js//home/homeView.js" var="homeView" />
 <spring:url value="/js/home/homeModel.js" var="homeModel" />
 <spring:url value="/js/home/homeController.js" var="homeController" />
@@ -16,15 +18,27 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <link href="${mainCss}" rel="stylesheet" />
+  <link href="${jqueryCss}" rel="stylesheet" />
   <script src="${jqueryJs}" type="application/javascript"></script>
+  <script src="${jqueryUiJs}" type="application/javascript"></script>
   <script src="${homeView}" type="application/javascript"></script>
   <script src="${homeModel}" type="application/javascript"></script>
   <script src="${homeController}" type="application/javascript"></script>
-
 <body>
 
+<h1>Pokemon List</h1>
+
+<h2>Filter pokemons by color</h2>
+
+<div id="pokemonSelectionHolder">
+  <select name="pokemon-color-selection" id="pokemon-color-selection">
+    <option value="NO_COLOR" data-class="pokemon-select-color-icon" selected>Select Color</option>
+  </select>
+</div>
+
+<div style="clear: both;" />
+
 <div class="pokemon-list">
-  <h1>Pokemon List</h1>
 
   <table class="pokemon-overview-table">
 

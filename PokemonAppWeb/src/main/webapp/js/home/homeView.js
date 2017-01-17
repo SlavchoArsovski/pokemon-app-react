@@ -19,7 +19,11 @@ var homeView = {
     addPokemonBtn: '#addPokemonBtn',
     updatePokemonBtn: '#updatePokemonBtn',
     deletePokemonBtn: '#deletePokemonBtn'
+
   },
+
+  pokemonColorSelectMenu: undefined,
+  selectedColor: 'NO_COLOR',
 
   selectedPokemon: {
     id: undefined,
@@ -40,6 +44,58 @@ var homeView = {
 
     $(me.pageComponents.pokemonInfoRow).click(function() {
       me._pokemonRowClickHandler(this);
+    });
+
+    $.widget('custom.iconselectmenu', $.ui.selectmenu, {
+      _renderItem: function(ul, item) {
+        var li = $('<li>'),
+          wrapper = $('<div>', { text: item.label });
+
+        if (item.disabled) {
+          li.addClass("ui-state-disabled");
+        }
+
+        if (item.value !== 'NO_COLOR') {
+          $('<span>', {
+            style: 'background-color: ' + item.value,
+            'class': 'ui-icon ' + item.element.attr('data-class')
+          }).appendTo(wrapper);
+        }
+
+        return li.append(wrapper).appendTo(ul);
+      }
+    });
+
+    me.pokemonColorSelectMenu = $('#pokemon-color-selection').iconselectmenu({
+      change: function(event, ui) {
+
+        var selected = ui.item.value;
+        me.selectedColor = selected;
+
+        // update selected color
+        $('.ui-selectmenu-icon').css('background-color', '');
+
+        if (selected !== 'NO_COLOR') {
+          $('.ui-selectmenu-icon').css('background-color', selected);
+        }
+
+        // filter pokemons by selected color
+        if (selected !== 'NO_COLOR') {
+          $(me.pageComponents.pokemonInfoRow).each(function(index, element) {
+            if ($(element).find('.pokemonColorHolder').text() !== ui.item.value) {
+              $(element).hide();
+            } else {
+              $(element).show();
+            }
+          });
+        } else {
+          $(me.pageComponents.pokemonInfoRow).show();
+        }
+
+      },
+      create: function(event, ui) {
+        $('.ui-selectmenu-icon').css('background-color', '');
+      }
     });
   },
 
@@ -62,7 +118,7 @@ var homeView = {
     $(me.pageComponents.pokemonDetailColor).val(me.selectedPokemon.color);
 
     if (!me.selectedPokemon.deletable) {
-      $(me.pageComponents.deletePokemonBtn).prop("disabled",true)
+      $(me.pageComponents.deletePokemonBtn).prop("disabled", true)
     }
 
     $(element).addClass('pokemon-row-selected');
@@ -122,11 +178,26 @@ var homeView = {
 
     var me = this;
 
+    var allColors = [];
+
+    $.each(model.pokemons, function(index, pokemon) {
+      allColors.push(pokemon.color);
+    });
+
+    var uniqueColors = allColors.filter(function(elem, index, self) {
+      return index == self.indexOf(elem);
+    });
+
+    if ($.inArray(me.selectedColor, uniqueColors) === -1) {
+      me.selectedColor = 'NO_COLOR';
+    }
+
+
     // remove old pokemon table raws
     $(me.pageComponents.pokemonInfoRow).remove();
 
     // render pokemon table raws
-    $.each(model.pokemons, function (index, pokemon) {
+    $.each(model.pokemons, function(index, pokemon) {
 
       var templateHtml =
         $('<div>').append($(me.pageComponents.pokemonRowTemplate).clone()).html();
@@ -143,9 +214,17 @@ var homeView = {
 
       row.removeClass('pokemon-row-template');
       row.addClass('pokemon-row');
-      row.toggle();
+
       if (me.selectedPokemon.id && me.selectedPokemon.id == pokemon.id) {
         row.addClass('pokemon-row-selected');
+      }
+
+      var showRow =
+        me.selectedColor === 'NO_COLOR'
+        || (me.selectedColor !== 'NO_COLOR' && me.selectedColor === pokemon.color);
+
+      if (showRow) {
+        row.show();
       }
 
       row.data('deletable', pokemon.deletable);
@@ -158,6 +237,33 @@ var homeView = {
 
     });
 
-  },
+    // update available colors
+    $('.ui-selectmenu-icon').css('background-color', '');
+    $('#pokemon-color-selection option').remove();
+
+
+    $('#pokemon-color-selection')
+      .append('<option value="NO_COLOR" data-class="pokemon-select-color-icon">Select Color</option>');
+
+    $.each(uniqueColors, function(index, color) {
+
+      var optionTemplate =
+        '<option value="{pokemon.color}" data-class="pokemon-select-color-icon">{pokemon.color}</option>';
+
+      optionTemplate = optionTemplate.replace('{pokemon.color}', color);
+      optionTemplate = optionTemplate.replace('{pokemon.color}', color);
+
+      $('#pokemon-color-selection').append(optionTemplate);
+    });
+
+
+    $('#pokemon-color-selection option[value="' + me.selectedColor + '"]').attr('selected', true);
+
+    if (me.selectedColor !== 'NO_COLOR') {
+      $('.ui-selectmenu-icon').css('background-color', me.selectedColor);
+    }
+
+    me.pokemonColorSelectMenu.iconselectmenu('refresh');
+  }
 
 };
