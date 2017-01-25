@@ -39,7 +39,7 @@ public class PokemonRestController {
       method = RequestMethod.GET)
   public PokemonRestViewDto getPokemonList() {
 
-    List<PokemonViewDto> pokemons = pokemonService.getPokemonsForLoggedInUser();
+    List<PokemonViewDto> pokemons = pokemonService.getAllPokemons();
 
     PokemonRestViewDto restViewDto = new PokemonRestViewDto(pokemons);
 

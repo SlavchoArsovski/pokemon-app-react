@@ -40,7 +40,7 @@ public class HomeController {
   @RequestMapping(value = "/home", method = RequestMethod.GET)
   public ModelAndView home() {
 
-    List<PokemonViewDto> pokemons = pokemonServiceImpl.getPokemonsForLoggedInUser();
+    List<PokemonViewDto> pokemons = pokemonServiceImpl.getAllPokemons();
 
     PokemonViewModel viewModel = new PokemonViewModel();
     viewModel.setPokemons(pokemons);

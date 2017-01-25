@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import mockModel from './mockModel';
 
+import http from 'http';
+
+import mockModel from './mockModel';
 import PokemonTable from './PokemonTable';
 
 class App extends Component {
-  render() {
 
+  componentDidMount() {
+    http.get('http://localhost:8080/pokemon-app/pokemonList', function(response) {
+      console.log(response);
+    });
+  }
+
+  render() {
     return (
       <div className="App">
         <h1>Pokemon List</h1>

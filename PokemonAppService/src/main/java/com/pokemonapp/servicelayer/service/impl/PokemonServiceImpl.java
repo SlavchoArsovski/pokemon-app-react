@@ -40,6 +40,17 @@ public class PokemonServiceImpl implements PokemonService {
     return pokemons;
   }
 
+  public List<PokemonViewDto> getAllPokemons() {
+
+    List<PokemonViewDto> pokemons =
+        pokemonRepository.findAll()
+            .stream()
+            .map(PokemonMapper::mapPokemonDbModelToDto)
+            .collect(Collectors.toList());
+
+    return pokemons;
+  }
+
   public PokemonViewDto savePokemon(PokemonViewDto pokemonViewDto) {
 
     Authentication auth = SecurityContextHolder.getContext().getAuthentication();

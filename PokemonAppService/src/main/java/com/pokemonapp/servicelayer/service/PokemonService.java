@@ -17,6 +17,8 @@ public interface PokemonService {
    */
   List<PokemonViewDto> getPokemonsForLoggedInUser();
 
+  List<PokemonViewDto> getAllPokemons();
+
   /**
    * Saves pokemon.
    *
