@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import PokemonColorSelection from './PokemonColorSelection';
 import PokemonTable from './PokemonTable';
 
 import http from './http/index';
@@ -22,7 +23,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const me = this;
 
     http.getJson('http://localhost:8080/pokemon-app/pokemonList')
       .then((responseAsJson) => {
@@ -35,7 +35,7 @@ class App extends Component {
 
         const uniquePokemonColors = lodash.uniq(pokemonColors);
 
-        me.setState(
+        this.setState(
           {
             initialized: true,
             pokemonColors: uniquePokemonColors,
@@ -72,17 +72,7 @@ class App extends Component {
 
         <h2>Filter pokemons by color</h2>
 
-        <div id="pokemonSelectionHolder">
-          <select name="pokemon-color-selection" id="pokemon-color-selection" onChange={this.colorChangeHandler}>
-            <option value="NO_COLOR">Select Color</option>
-            {
-              pokemonColors.map((pokemonColor, index) =>
-                <option key={index} value={pokemonColor}>{pokemonColor}</option>
-              )
-            }
-          </select>
-        </div>
-
+        <PokemonColorSelection pokemonColors={pokemonColors} onChangeHandler={this.colorChangeHandler} />
         <PokemonTable pokemons={pokemonByColors} />
 
         </div>
