@@ -58,7 +58,7 @@ class App extends Component {
             <option value="NO_COLOR" data-class="pokemon-select-color-icon">Select Color</option>
             {
               pokemonColors.map((pokemonColor, index) =>
-                <option value={pokemonColor}>{pokemonColor}</option>
+                <option key={index} value={pokemonColor}>{pokemonColor}</option>
               )
             }
           </select>
