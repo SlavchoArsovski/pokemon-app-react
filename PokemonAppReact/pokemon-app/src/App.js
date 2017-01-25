@@ -12,9 +12,13 @@ class App extends Component {
     super(props);
 
     this.state = {
+      initialized: false,
       pokemons: [],
-      pokemonColors: []
+      pokemonColors: [],
+      selectedColor: 'NO_COLOR'
     };
+
+    this.colorChangeHandler = this.colorChangeHandler.bind(this);
   }
 
   componentDidMount() {
@@ -25,26 +29,41 @@ class App extends Component {
 
         const pokemons = responseAsJson.pokemons;
 
-        me.setState({ pokemons });
-
         const pokemonColors = pokemons.map(pokemon => {
-          return pokemon.color
+          return pokemon.color;
         });
+
         const uniquePokemonColors = lodash.uniq(pokemonColors);
 
-        me.setState({ pokemonColors: uniquePokemonColors });
+        me.setState(
+          {
+            initialized: true,
+            pokemonColors: uniquePokemonColors,
+            pokemons
+          });
       });
+  }
+
+  colorChangeHandler(event) {
+    this.setState({ selectedColor: event.target.value });
   }
 
   render() {
 
     const {
       pokemons,
-      pokemonColors
+      pokemonColors,
+      selectedColor,
+      initialized
     } = this.state;
 
-    if (!pokemons) {
+    if (!initialized) {
       return (<div>Loading...</div>);
+    }
+
+    let pokemonByColors = pokemons;
+    if (selectedColor !== 'NO_COLOR') {
+      pokemonByColors = pokemons.filter(pokemon => { return pokemon.color === selectedColor});
     }
 
     return (
@@ -54,8 +73,8 @@ class App extends Component {
         <h2>Filter pokemons by color</h2>
 
         <div id="pokemonSelectionHolder">
-          <select name="pokemon-color-selection" id="pokemon-color-selection">
-            <option value="NO_COLOR" data-class="pokemon-select-color-icon">Select Color</option>
+          <select name="pokemon-color-selection" id="pokemon-color-selection" onChange={this.colorChangeHandler}>
+            <option value="NO_COLOR">Select Color</option>
             {
               pokemonColors.map((pokemonColor, index) =>
                 <option key={index} value={pokemonColor}>{pokemonColor}</option>
@@ -64,40 +83,9 @@ class App extends Component {
           </select>
         </div>
 
-        <PokemonTable pokemons={pokemons} />
-
-        <div className="pokemon-detail">
-          <h1>Pokemon Detail</h1>
-
-          <table>
-            <tbody>
-            <tr>
-              <td>Name</td>
-              <td><input id="pokemonDetailName" type="text" /></td>
-            </tr>
-            <tr>
-              <td>Type</td>
-              <td><input id="pokemonDetailType" type="text" /></td>
-            </tr>
-            <tr>
-              <td>Color</td>
-              <td><input id="pokemonDetailColor" type="color" /></td>
-            </tr>
-            <tr>
-              <td style={{ colSpan: 2 }}>
-                <div id="pokemonDetailId" />
-              </td>
-            </tr>
-            </tbody>
-          </table>
-
-          <button id="addPokemonBtn">Add</button>
-          <button id="updatePokemonBtn">Update</button>
-          <button id="deletePokemonBtn">Delete</button>
+        <PokemonTable pokemons={pokemonByColors} />
 
         </div>
-
-      </div>
     );
   }
 }
