@@ -1,15 +1,3 @@
-/*
- * Copyright (c) 2012 - 2016 UBS. All Rights Reserved.
- * This software is the confidential and proprietary information of UBS.
- * It is furnished under license and may only be used or copied in
- * accordance with the terms of such license.
- * This software is subject to change without notice and no information
- * contained in it should be construed as commitment by UBS. UBS cannot
- * accept any responsibility, financial or otherwise, for any consequences
- * arising from the use of this software except as otherwise stated in the
- * terms of the license.
- */
-
 import request from 'superagent/lib/client';
 import preventRequestCaching from 'superagent-no-cache';
 

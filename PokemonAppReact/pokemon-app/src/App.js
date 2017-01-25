@@ -63,7 +63,9 @@ class App extends Component {
 
     let pokemonByColors = pokemons;
     if (selectedColor !== 'NO_COLOR') {
-      pokemonByColors = pokemons.filter(pokemon => { return pokemon.color === selectedColor});
+      pokemonByColors = pokemons.filter(pokemon => {
+        return pokemon.color === selectedColor
+      });
     }
 
     return (
@@ -75,7 +77,7 @@ class App extends Component {
         <PokemonColorSelection pokemonColors={pokemonColors} onChangeHandler={this.colorChangeHandler} />
         <PokemonTable pokemons={pokemonByColors} />
 
-        </div>
+      </div>
     );
   }
 }
