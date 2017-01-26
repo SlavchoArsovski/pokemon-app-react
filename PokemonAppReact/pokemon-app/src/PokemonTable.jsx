@@ -1,10 +1,12 @@
 import React from 'react';
 
 import PokemonTableRow from './PokemonTableRow';
+import PokemonTableDetailRow from './PokemonTableDetailRow';
 
 function PokemonTable(props) {
   const {
-    pokemons
+    pokemons,
+    deletePokemonHandler
   } = props;
 
   return (
@@ -24,7 +26,7 @@ function PokemonTable(props) {
         <tbody>
         {
           pokemons.map((pokemon, index) =>
-            <PokemonTableRow key={pokemon.id} {...pokemon} />
+            <PokemonTableRow key={pokemon.id} {...pokemon} deletePokemonHandler={deletePokemonHandler} />
           )
         }
 

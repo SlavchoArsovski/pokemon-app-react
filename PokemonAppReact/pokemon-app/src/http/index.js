@@ -1,7 +1,7 @@
 import request from 'superagent/lib/client';
 import preventRequestCaching from 'superagent-no-cache';
 
-const __DEV__ = true;
+const __DEV__ = false;
 
 /**
  * Makes a 'GET' request to the given endpoint.
@@ -142,9 +142,52 @@ function responseAsJson(response) {
   return response.body || response.text;
 }
 
+function deleteJson(endpoint, data, params, headers) {
+  return deleteRequest(endpoint, data, params, headers).then(responseAsJson);
+}
+
+function deleteRequest(endpoint, data, params, headers) {
+  const promise = new Promise((resolve, reject) => {
+    let deleteRequest = request
+      .delete(endpoint)
+      .use(preventRequestCaching);
+
+    if (headers) {
+      headers.forEach((header) => deleteRequest.set(header.name, header.value));
+    }
+
+    // because of CORS problems with cookies
+    if (__DEV__) {
+      deleteRequest = deleteRequest.withCredentials();
+    }
+
+    deleteRequest
+      .type(request.types.json)
+      .query(params)
+      .send(data)
+      .end((error, response) => {
+        if (error) {
+          reject(error);
+        }
+
+        resolve(response);
+      });
+  });
+
+  if (__DEV__) {
+    promise
+      .then(() => console.log('POST request succeeded:', endpoint))
+      .catch(error => console.log('POST request failed with error:', error, 'endpoint:', endpoint));
+  }
+
+
+  return promise;
+}
+
 // the public api
 export default {
   getJson,
   postJson,
+  deleteJson,
   getParameter
 };

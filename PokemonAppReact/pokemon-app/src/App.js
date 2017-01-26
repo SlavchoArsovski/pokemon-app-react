@@ -7,7 +7,7 @@ import PokemonTable from './PokemonTable';
 import http from './http/index';
 import lodash from 'lodash';
 
-class App extends Component {
+class App extends React.Component {
 
   constructor(props) {
     super(props);
@@ -20,9 +20,14 @@ class App extends Component {
     };
 
     this.colorChangeHandler = this.colorChangeHandler.bind(this);
+    this.deletePokemonHandler = this.deletePokemonHandler.bind(this);
   }
 
   componentDidMount() {
+    this.getCompleteState();
+  }
+
+  getCompleteState() {
 
     http.getJson('http://localhost:8080/pokemon-app/pokemonList')
       .then((responseAsJson) => {
@@ -42,10 +47,18 @@ class App extends Component {
             pokemons
           });
       });
+
   }
 
   colorChangeHandler(event) {
     this.setState({ selectedColor: event.target.value });
+  }
+
+  deletePokemonHandler(pokemonId) {
+    http.deleteJson(`http://localhost:8080/pokemon-app/deletePokemon/${pokemonId}`)
+      .then(() => {
+        this.getCompleteState();
+      });
   }
 
   render() {
@@ -64,7 +77,7 @@ class App extends Component {
     let pokemonByColors = pokemons;
     if (selectedColor !== 'NO_COLOR') {
       pokemonByColors = pokemons.filter(pokemon => {
-        return pokemon.color === selectedColor
+        return pokemon.color === selectedColor;
       });
     }
 
@@ -75,7 +88,7 @@ class App extends Component {
         <h2>Filter pokemons by color</h2>
 
         <PokemonColorSelection pokemonColors={pokemonColors} onChangeHandler={this.colorChangeHandler} />
-        <PokemonTable pokemons={pokemonByColors} />
+        <PokemonTable pokemons={pokemonByColors} deletePokemonHandler={this.deletePokemonHandler} />
 
       </div>
     );

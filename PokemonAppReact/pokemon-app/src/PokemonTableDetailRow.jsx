@@ -1,18 +1,15 @@
 import React from 'react';
 
-function PokemonTableRow(props) {
+function PokemonTableDetailRow(props) {
   const {
     id,
     name,
     type,
-    color,
-    deletePokemonHandler
+    color
   } = props;
 
-  const deleteBtnClickHandler = deletePokemonHandler.bind(this, id);
-
   return (
-    <tr key={id} className="pokemon-row">
+    <tr className="pokemon-row">
       <td className="pokemonId">{id}</td>
       <td className="pokemonName">{name}</td>
       <td className="pokemonType">{type}</td>
@@ -20,10 +17,7 @@ function PokemonTableRow(props) {
         <div style={ { backgroundColor: color }} />
         <div className="pokemonColorHolder">{color}</div>
       </td>
-      <td>
-        <button onClick={deleteBtnClickHandler}>Delete</button>
-      </td>
     </tr>);
 }
 
-export default PokemonTableRow;
+export default PokemonTableDetailRow;
