@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+
 import './App.css';
 
 import PokemonColorSelection from './PokemonColorSelection';
 import PokemonTable from './PokemonTable';
+import { ModalContainer, ModalDialog } from 'react-modal-dialog';
 
 import http from './http/index';
 import lodash from 'lodash';
@@ -14,13 +16,16 @@ class App extends React.Component {
 
     this.state = {
       initialized: false,
+      isShowingModal: false,
       pokemons: [],
       pokemonColors: [],
-      selectedColor: 'NO_COLOR'
+      selectedColor: 'NO_COLOR',
+      selectedPokemonForPopup: null
     };
 
     this.colorChangeHandler = this.colorChangeHandler.bind(this);
     this.deletePokemonHandler = this.deletePokemonHandler.bind(this);
+    this.handlePokemonDetailsClick = this.handlePokemonDetailsClick.bind(this);
   }
 
   componentDidMount() {
@@ -61,13 +66,19 @@ class App extends React.Component {
       });
   }
 
+  handlePokemonDetailsClick(pokemon) {
+    this.setState({ isShowingModal: true, selectedPokemonForPopup: pokemon });
+  }
+
   render() {
 
     const {
       pokemons,
       pokemonColors,
       selectedColor,
-      initialized
+      initialized,
+      isShowingModal,
+      selectedPokemonForPopup
     } = this.state;
 
     if (!initialized) {
@@ -81,6 +92,9 @@ class App extends React.Component {
       });
     }
 
+    let handleClick = () => this.setState({ isShowingModal: true });
+    let handleClose = () => this.setState({ isShowingModal: false });
+
     return (
       <div className="App">
         <h1>Pokemon List</h1>
@@ -88,7 +102,26 @@ class App extends React.Component {
         <h2>Filter pokemons by color</h2>
 
         <PokemonColorSelection pokemonColors={pokemonColors} onChangeHandler={this.colorChangeHandler} />
-        <PokemonTable pokemons={pokemonByColors} deletePokemonHandler={this.deletePokemonHandler} />
+        <PokemonTable pokemons={pokemonByColors} handlePokemonDetailsClick={this.handlePokemonDetailsClick} />
+
+        <div onClick={handleClick}>
+          {
+            isShowingModal &&
+            <ModalContainer onClose={handleClose}>
+              <ModalDialog onClose={handleClose} dismissOnBackgroundClick={false}>
+                <h1>Pokemon Details</h1>
+                <div>ID: {selectedPokemonForPopup.id}</div>
+                <div>NAME: {selectedPokemonForPopup.name}</div>
+                <div>TYPE: {selectedPokemonForPopup.type}</div>
+                <div>COLOR: {selectedPokemonForPopup.color}</div>
+                <button>OK</button>
+                <button>Update</button>
+                <button>Delete</button>
+              </ModalDialog>
+            </ModalContainer>
+          }
+        </div>
+
 
       </div>
     );
