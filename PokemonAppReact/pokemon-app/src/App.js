@@ -59,11 +59,13 @@ class App extends React.Component {
     this.setState({ selectedColor: event.target.value });
   }
 
-  deletePokemonHandler(pokemonId) {
-    http.deleteJson(`http://localhost:8080/pokemon-app/deletePokemon/${pokemonId}`)
+  deletePokemonHandler() {
+    http.deleteJson(`http://localhost:8080/pokemon-app/deletePokemon/${this.state.selectedPokemonForPopup.id}`)
       .then(() => {
         this.getCompleteState();
       });
+
+    this.setState({ isShowingModal: false });
   }
 
   handlePokemonDetailsClick(pokemon) {
@@ -110,13 +112,38 @@ class App extends React.Component {
             <ModalContainer onClose={handleClose}>
               <ModalDialog onClose={handleClose} dismissOnBackgroundClick={false}>
                 <h1>Pokemon Details</h1>
-                <div>ID: {selectedPokemonForPopup.id}</div>
-                <div>NAME: {selectedPokemonForPopup.name}</div>
-                <div>TYPE: {selectedPokemonForPopup.type}</div>
-                <div>COLOR: {selectedPokemonForPopup.color}</div>
-                <button>OK</button>
-                <button>Update</button>
-                <button>Delete</button>
+                <table>
+                  <tbody>
+                  <tr>
+                    <td>ID</td>
+                    <td>{selectedPokemonForPopup.id}</td>
+                  </tr>
+                  <tr>
+                    <td>Name</td>
+                    <td>
+                      <input type="text" value={selectedPokemonForPopup.name} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Type</td>
+                    <td>
+                      <input type="text" value={selectedPokemonForPopup.type} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Color</td>
+                    <td>
+                      <input type="color" value={selectedPokemonForPopup.color} />
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <div className="pokemon-detail">
+                  <button onClick={handleClose}>OK</button>
+                  <button>Update</button>
+                  <button onClick={this.deletePokemonHandler}>Delete</button>
+                </div>
               </ModalDialog>
             </ModalContainer>
           }

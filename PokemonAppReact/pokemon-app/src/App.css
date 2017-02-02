@@ -130,12 +130,16 @@ h2 {
   margin: 3px;
 }
 
-.pokemon-list, .pokemon-detail {
+.pokemon-list {
   float: left;
 }
 
 .pokemon-detail {
-  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.pokemon-detail > button {
+  margin-right: 15px;
 }
 
 .pokemonColorHolder {
